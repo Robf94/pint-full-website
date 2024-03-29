@@ -159,12 +159,45 @@ body {
     }
 }
 
+
+/* Footer */
+.footer-container {
+    height: 100px;
+    width: 100%;
+    // color: white;
+    background-color: $primary-lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    text-align: center;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.fa-brands:hover {
+    color: $primary-color;
+}
+
+.footer-text { 
+    // color: white;
+    text-align: center;
+    width: 100%;
+    // padding: 15px 0;
+}
+
 // END SASS
 
 
 // MEDIA QUERIES
 
 @media screen and (min-width: 768px) {
+
     // Change position of 'Volunteer With Us' section
     .hero-section-volunteer-page {
         #volunteer-hero-img {
@@ -177,7 +210,7 @@ body {
             top: 50%;
             transform: translateY(-50%);
             right: 10%;
-            width: 35%;
+            width: 325px;
             border-radius: $card-border-radius;
         }
     }

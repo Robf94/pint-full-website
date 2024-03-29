@@ -81,6 +81,32 @@ body {
      object-position: 100% 25%;
 }
 
+/* Footer */
+.footer-container {
+  height: 100px;
+  width: 100%;
+  background-color: #fedec3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.fa-brands:hover {
+  color: #e9b184;
+}
+
+.footer-text {
+  text-align: center;
+  width: 100%;
+}
+
 @media screen and (min-width: 768px) {
   .hero-section-volunteer-page #volunteer-hero-img {
     height: calc(100vh - 55.6px);
@@ -93,7 +119,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     right: 10%;
-    width: 35%;
+    width: 325px;
     border-radius: 20px;
   }
 }
