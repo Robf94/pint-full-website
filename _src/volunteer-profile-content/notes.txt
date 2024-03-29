@@ -1,0 +1,10 @@
+volunteer-pages.json file notes
+
+The "layout" key sets each markdown page to have the volunteer-profile.njk layout. This avoids having to type this in each .md file and helps with consistency and error reduction.
+
+The "permalink" key specifies the URL structure for the generated output HTML page. The "/{{ page.fileSlug }}/" is the value assigned to the permalink key. Broken down:
+    - "/" forward slash, used as a separator in URLs
+    - "{{ page.fileSlug }}" is a placeholder enclosed in double curly braces. When 11ty processes the content file, it replaces this placeholder with the slugified* version of the content file's filename (excluding fil etension). The slugification process typicalyy converts spaces to hyphens and makes the filesname lowercase.
+    - "/" closes the URL structure
+
+*Slugification - the process of converting a string into a URL-friendly format

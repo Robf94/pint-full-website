@@ -1,0 +1,175 @@
+// VARIABLES
+
+$primary-color: #e9b184;
+$primary-lighter: #fedec3;
+
+$secondary-color: #0a83e5;
+$secondary-darker: #044f8c;
+
+$tertiary-color: #7A518E;
+
+$card-background-color: #f8f9fa;
+
+$navbar-height: 100px;
+
+$btn-border-radius: 50px;
+
+$default-padding: 20px;
+
+
+$section-margin: 20px;
+$footer-padding: 20px;
+$card-height: 100%;
+$navbar-height: 60px;
+$header-footer-color: #f8f9fa;
+
+$card-border-radius: 20px;
+
+$transition: 0.2s ease;
+
+$transform-hover: scale(1.01);
+$transform-active: scale(0.99);
+
+$shadow-cards: 0px 10px 10px 0px #c5c5c5b3;
+
+
+// END VARIABLES
+
+
+// RESETS
+
+body {
+    margin: 0;
+    // font-family: ;
+}
+
+// END RESETS
+
+// GLOBAL ELEMENTS
+
+// Button Design
+.custom-btn {
+    color: white;
+    background-color: $secondary-color;
+    border-radius: $btn-border-radius;
+    border: none;
+    transition: $transition;
+    box-shadow: 0px 5px 5px 0px grey;
+    &:hover {
+        color: white;
+        background-color: $secondary-darker;
+        transform: $transform-hover;
+    }
+    &:active {
+        color: white !important;
+        background-color: $secondary-darker !important;
+        transform: $transform-active;
+    }
+}
+
+// END GLOBAL ELEMENTS
+
+
+// MIXINS
+
+
+// END MIXINS
+
+
+// UNIVERSAL BEHAVIOUR
+
+// .heading-text, .paragraph-text {
+//     padding: $default-padding;
+// }
+
+// Container with a #fedec3 background covering full page width
+.full-width-container {
+    padding: $default-padding;
+    background-color: $primary-lighter;
+}
+
+// .container-heading {
+//     padding: $container-heading-padding;
+// }
+
+// END UNIVERSAL BEHAVIOUR
+
+// SASS
+
+.homepage-container {
+    margin: 10px;
+    padding: 10px;
+    background-color: $card-background-color;
+    border: 5px solid $primary-color;
+}
+
+.carousel-container {
+    .gradient {
+        position:absolute;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(to top, black, transparent 40%);
+    }
+    .carousel-item {
+        height: calc(70vh - $navbar-height);
+    }
+    .c-img {
+        object-fit: cover !important;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+// VOLUNTEER PAGE
+
+// .volunteer-intro {
+//     background-color: $primary-lighter;
+// }
+
+.card-col {
+    .card {
+        height: $card-height;
+        transition: $transition;
+        border-radius: $card-border-radius;
+        background-color: $card-background-color;
+        text-decoration: none;
+        border: none;
+        box-shadow: $shadow-cards;
+        .card-img-fit {
+            aspect-ratio: 5 / 3;
+            // alter positions for nth images
+            object-fit: cover;
+            border-top-left-radius: $card-border-radius;
+            border-top-right-radius: $card-border-radius;
+        }
+        // .card-body {
+        //     display: flex;
+        //     flex-direction: column;
+        // }
+        &:hover {
+            transform: $transform-hover;
+        }
+    }
+    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+        .card-img-fit {
+            object-position: 100% 25%;
+        }
+    }
+}
+
+
+// .col:nth-child(1) {
+//     .card-img-fit {
+//         display: none;
+//     }
+// }
+
+
+// END SASS
+
+
+// MEDIA QUERIES
+
+
+// END MEDIA QUERIES

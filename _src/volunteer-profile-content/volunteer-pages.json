@@ -1,0 +1,4 @@
+{
+    "layout": "volunteer-profile.njk",
+    "permalink": "/{{ page.fileSlug }}/"
+}
