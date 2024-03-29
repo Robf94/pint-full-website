@@ -1,5 +1,13 @@
 body {
   margin: 0;
+  font-family: Anuphan, sans-serif;
+}
+
+.navbar-brand {
+  height: 30px;
+}
+.navbar-brand #nav-logo {
+  height: 100%;
 }
 
 .custom-btn {
@@ -40,7 +48,7 @@ body {
   background-image: linear-gradient(to top, black, transparent 40%);
 }
 .carousel-container .carousel-item {
-  height: calc(70vh - 60px);
+  height: calc(70vh - 55.6px);
 }
 .carousel-container .c-img {
   -o-object-fit: cover !important;
@@ -68,7 +76,24 @@ body {
 .card-col .card:hover {
   transform: scale(1.01);
 }
-.card-col:nth-child(1) .card-img-fit, .card-col:nth-child(2) .card-img-fit, .card-col:nth-child(3) .card-img-fit, .card-col:nth-child(4) .card-img-fit, .card-col:nth-child(5) .card-img-fit {
+.card-col:nth-child(1) .card-img-fit, .card-col:nth-child(2) .card-img-fit, .card-col:nth-child(3) .card-img-fit, .card-col:nth-child(4) .card-img-fit, .card-col:nth-child(5) .card-img-fit, .card-col:nth-child(7) .card-img-fit {
   -o-object-position: 100% 25%;
      object-position: 100% 25%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section-volunteer-page #volunteer-hero-img {
+    height: calc(100vh - 55.6px);
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero-section-volunteer-page #volunteer-recruit-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    width: 35%;
+    border-radius: 20px;
+  }
 }
