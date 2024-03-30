@@ -5,9 +5,8 @@
 /_src/volunteer-profile-content/notes.txt
 /_src/volunteer-profile-content/volunteer-notes.txt
 
-# _site assets
-
+# _site assets - removes duplicate assets
 /_site/assets/
 
 
-# Note - to add tracked files to .gitignore, first type the command "git rm --cached [file/folder path from root]"
+# Note - to add tracked files to .gitignore, first type the command "git rm -r --cached [file/folder path from root]"
