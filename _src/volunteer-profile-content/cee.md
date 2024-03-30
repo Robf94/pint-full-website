@@ -3,6 +3,8 @@ pageId: cee-bioPage
 
 bioPortrait: ../assets/volunteers/portrait-placeholder.png
 
+portraitId: bio-portrait-cee
+
 bioName: Cee
 
 bioDuty: Founder and Trustee

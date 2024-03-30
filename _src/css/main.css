@@ -1,6 +1,10 @@
 body {
   margin: 0;
   font-family: Anuphan, sans-serif;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .navbar-brand {
@@ -57,7 +61,10 @@ body {
   width: 100%;
 }
 
-.card-col .card {
+.card-container {
+  margin: 30px 0;
+}
+.card-container .card-col .card {
   height: 100%;
   transition: 0.2s ease;
   border-radius: 20px;
@@ -66,19 +73,34 @@ body {
   border: none;
   box-shadow: 0px 10px 10px 0px rgba(197, 197, 197, 0.7019607843);
 }
-.card-col .card .card-img-fit {
+.card-container .card-col .card .card-img-fit {
   aspect-ratio: 5/3;
   -o-object-fit: cover;
      object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.card-col .card:hover {
+.card-container .card-col .card:hover {
   transform: scale(1.01);
 }
-.card-col:nth-child(1) .card-img-fit, .card-col:nth-child(2) .card-img-fit, .card-col:nth-child(3) .card-img-fit, .card-col:nth-child(4) .card-img-fit, .card-col:nth-child(5) .card-img-fit, .card-col:nth-child(7) .card-img-fit {
+.card-container .card-col:nth-child(1) .card-img-fit, .card-container .card-col:nth-child(2) .card-img-fit, .card-container .card-col:nth-child(3) .card-img-fit, .card-container .card-col:nth-child(4) .card-img-fit, .card-container .card-col:nth-child(5) .card-img-fit, .card-container .card-col:nth-child(7) .card-img-fit {
   -o-object-position: 100% 25%;
      object-position: 100% 25%;
+}
+
+.volunteer-bio-main {
+  margin: 30px 0;
+}
+.volunteer-bio-main .bio-portrait {
+  width: 100%;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#bio-portrait-anwar {
+  -o-object-position: 0% 25%;
+     object-position: 0% 25%;
 }
 
 /* Footer */
@@ -91,18 +113,12 @@ body {
   justify-content: center;
   gap: 3%;
   text-align: center;
+  position: static;
 }
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-.fa-brands:hover {
+.footer-container .fa-brands:hover {
   color: #e9b184;
 }
-
-.footer-text {
+.footer-container .footer-text {
   text-align: center;
   width: 100%;
 }

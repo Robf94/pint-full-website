@@ -3,27 +3,30 @@ layout: base.njk
 <!-- pageTitle: -->
 ---
 
-<section class="volunteer-bio-main" id="{{ pageId }}">
+<section class="volunteer-bio-main d-flex align-items-center m-0" id="{{ pageId }}">
     <div class="container-fluid">
 
-        <div class="row">
+        <div class="row justify-content-around align-items-center">
 
-            <div class="col-12 col-sm-6 bio-img-container">
-                <img src="{{ bioPortrait }}" class="img-fluid" alt="...">
+            <div class="col-12 col-md-6 col-lg-3 bio-portrait-container">
+                <img src="{{ bioPortrait }}" class="img-fluid bio-portrait" id="{{ portraitId }}"alt="...">
             </div>
 
             <div class="col-12 col-md-6 bio-name-container">
                 <h2 class="bio-name">{{ bioName }}</h2>
                 <h6 class="card-subtitle mb-2 text-body-secondary">{{ bioDuty }}</h6>
+                <p class="bio-tagline fst-italic">"{{ bioTagline }}"</p>
+                <h3 class="bio-heading">Bio</h3>
+                <p class="bio-body">{{ bioBody }}</p>
+
             </div>
 
             <div class="col-12 col-md-6 bio-tagline-container">
-                <h2 class="bio-name">{{ bioTagline }}</h2>
+
             </div>
 
-            <div class="col-12 col-md-6">
-                <h3>Bio</h3>
-                <p>{{ bioBody }}</p>
+            <div class="col-12 col-md-6 bio-container">
+
             </div>
         </div>
     </div>

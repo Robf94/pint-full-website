@@ -14,6 +14,7 @@ $btn-border-radius: 50px;
 
 $default-padding: 20px;
 
+$section-separator: 30px 0;
 
 $section-margin: 20px;
 $footer-padding: 20px;
@@ -39,6 +40,12 @@ $shadow-cards: 0px 10px 10px 0px #c5c5c5b3;
 body {
     margin: 0;
     font-family: Anuphan, sans-serif;
+
+    // Enable footer to stay at bottom of viewport on short pages. Apparently only works properly when header is not fixed to top of viewport
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto; // Sets heights to header: auto; body: 1fr; footer: auto so that header and footer take up as much space depending on how much content is inside of them. Body expands if there is available space after adding necessary content
+    grid-template-columns: minmax(0, 1fr); // Prevents page scrolling horizontally if there is content inside that is wider than the screen
 }
 
 // END RESETS
@@ -132,33 +139,53 @@ body {
 //     background-color: $primary-lighter;
 // }
 
-.card-col {
-    .card {
-        height: $card-height;
-        transition: $transition;
-        border-radius: $card-border-radius;
-        background-color: $card-background-color;
-        text-decoration: none;
-        border: none;
-        box-shadow: $shadow-cards;
-        .card-img-fit {
-            aspect-ratio: 5 / 3;
-            // alter positions for nth images
-            object-fit: cover;
-            border-top-left-radius: $card-border-radius;
-            border-top-right-radius: $card-border-radius;
+.card-container {
+    margin: $section-separator;
+    .card-col {
+        .card {
+            height: $card-height;
+            transition: $transition;
+            border-radius: $card-border-radius;
+            background-color: $card-background-color;
+            text-decoration: none;
+            border: none;
+            box-shadow: $shadow-cards;
+            .card-img-fit {
+                aspect-ratio: 5 / 3;
+                // alter positions for nth images
+                object-fit: cover;
+                border-top-left-radius: $card-border-radius;
+                border-top-right-radius: $card-border-radius;
+            }
+            &:hover {
+                transform: $transform-hover;
+            }
         }
-        &:hover {
-            transform: $transform-hover;
-        }
-    }
-    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(7) {
-        .card-img-fit {
-            object-position: 100% 25%;
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(7) {
+            .card-img-fit {
+                object-position: 100% 25%;
+            }
         }
     }
 }
 
+// Bio Page
+
+.volunteer-bio-main {
+    margin: $section-separator;
+    .bio-portrait {
+        width: 100%;
+        aspect-ratio: 1; // Squares image
+        object-fit: cover;
+    // set ID to each image as each will be different
+    }
+}
+
+// Set object-position for each portrait where required
+
+#bio-portrait-anwar {
+    object-position: 0% 25%;
+}
 
 /* Footer */
 .footer-container {
@@ -171,25 +198,23 @@ body {
     justify-content: center;
     gap: 3%;
     text-align: center;
-
-
+    position: static;
+    .fa-brands:hover {
+        color: $primary-color;
+    }
+    .footer-text { 
+        // color: white;
+        text-align: center;
+        width: 100%;
+        // padding: 15px 0;
+    }
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
+// a {
+//     text-decoration: none;
+//     color: white;
+// }
 
-.fa-brands:hover {
-    color: $primary-color;
-}
-
-.footer-text { 
-    // color: white;
-    text-align: center;
-    width: 100%;
-    // padding: 15px 0;
-}
 
 // END SASS
 
