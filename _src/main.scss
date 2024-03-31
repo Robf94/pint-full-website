@@ -40,7 +40,8 @@ $shadow-cards: 0px 10px 10px 0px #c5c5c5b3;
 body {
     font-family: Anuphan, sans-serif;
 
-    // Enable footer to stay at bottom of viewport on short pages. Apparently only works properly when header is not fixed to top of viewport
+    // Enable footer to stay at bottom of viewport on short pages
+    // Apparently only works properly when header is not fixed to top of viewport
     min-height: 100dvh;
     display: grid;
     grid-template-rows: auto 1fr auto; // Sets heights to header: auto; body: 1fr; footer: auto so that header and footer take up as much space depending on how much content is inside of them. Body expands if there is available space after adding necessary content
@@ -85,6 +86,23 @@ body {
         color: white !important;
         background-color: $secondary-darker !important;
         transform: $transform-active;
+    }
+}
+
+#donateBtn {
+    background-color: $primary-color;
+    font-size: 20px;
+    // position: absolute;
+    // right: 10px;
+    // top: 7.5px;
+    border-radius: 15px;
+    padding: 4px 10px;
+    border: 3px solid;
+    height: 35px;
+    cursor: pointer;
+    &:hover {
+        background-color: #5b2b04;
+        color: white;
     }
 }
 
@@ -137,6 +155,18 @@ body {
 // .volunteer-intro {
 //     background-color: $primary-lighter;
 // }
+
+// .card {
+//     height: $card-height;
+//     transition: $transition;
+//     border-radius: $card-border-radius;
+//     background-color: $card-background-color;
+//     text-decoration: none;
+//     border: none;
+//     box-shadow: $shadow-cards;
+// }
+
+// Rearrange card styling to use globally
 
 .card-container {
     margin: $section-separator;

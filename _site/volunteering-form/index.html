@@ -53,15 +53,48 @@
 
 <p>We are always looking for reliable individuals who can give up a few hours of their time to volunteer with us. There are many roles to choose from, whether volunteering on the streets with our outreach team, or helping with the charity’s administration, legal, marketing, or graphic design departments. An email is all it takes to find out how you can make a difference to someone in need today.</p>
 
+<section class="homepage-main-section" id="get-in-touch">
+    <!-- Style as card with drop shadow? -->
+    <h2 class="section-headings">Get in touch</h2>
+  
+    <form class="form-card col-md-6 col-lg-5" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit="submit">
+  
+      <input class="d-none" name="bot-field">
+  
+      <div class="form-floating col-md-4 mt-3 form-name w-100">
+        <input type="text" class="form-control" id="first-name" name="name" placeholder="First Name" required>
+        <label for="name">First Name</label>
+      </div>
+
+      <div class="form-floating col-md-4 mt-3 form-name w-100">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Surname" required>
+        <label for="name">Surname</label>
+      </div>
+  
+      <div class="form-floating col-md-4 mt-3 w-100">
+        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+        <label for="email">Email Address</label>
+      </div>
+  
+      <div class="form-floating col-md-4 mt-3 w-100">
+        <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+        <label for="email">Mobile</label>
+      </div>
+  
+      <div class="form-floating col-md-4 mt-3 w-100">
+        <textarea name="message" class="form-control message-input-box" placeholder="Why would you like to volunteer for PINT?" id="floatingTextArea" required></textarea>
+        <label for="message">Why would you like to volunteer for PINT?</label> <!-- Increase height -->
+      </div>
+      
+      <button class="form_submit btn btn-primary custom-btn col-12 col-md-1 mt-3 w-100" id="form-submit-btn" type="submit">
+        <span>Send</span>
+      </button>
+  
+    </form>
+  </section>
+
 <!--
 
-    First name (text)
-    Surname (text)
-    Email address (email)
-    Postcode (text)
-    Mobile number (number)
-    Please indicate your desired volunteer pathway(?) (tick boxes)
-    Why would you like to volunteer for PINT? (textarea)
 
     Submit button (link to Netlify forms)
 -->
