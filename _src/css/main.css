@@ -96,7 +96,7 @@ body {
 .card-container .card-col .card:hover {
   transform: scale(1.01);
 }
-.card-container .card-col:nth-child(1) .card-img-fit, .card-container .card-col:nth-child(2) .card-img-fit, .card-container .card-col:nth-child(3) .card-img-fit, .card-container .card-col:nth-child(4) .card-img-fit, .card-container .card-col:nth-child(5) .card-img-fit, .card-container .card-col:nth-child(7) .card-img-fit {
+.card-container .card-col:nth-child(1) .card-img-fit, .card-container .card-col:nth-child(2) .card-img-fit, .card-container .card-col:nth-child(3) .card-img-fit, .card-container .card-col:nth-child(4) .card-img-fit, .card-container .card-col:nth-child(5) .card-img-fit, .card-container .card-col:nth-child(6) .card-img-fit, .card-container .card-col:nth-child(7) .card-img-fit {
   -o-object-position: 100% 25%;
      object-position: 100% 25%;
 }
@@ -111,9 +111,13 @@ body {
      object-fit: cover;
 }
 
-#bio-portrait-anwar {
+#bio-portrait-daiod {
   -o-object-position: 0% 25%;
      object-position: 0% 25%;
+}
+
+.form-wrapper .message-input-box {
+  height: 150px;
 }
 
 /* Footer */

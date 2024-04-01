@@ -166,7 +166,7 @@ body {
 //     box-shadow: $shadow-cards;
 // }
 
-// Rearrange card styling to use globally
+// Rearrange card styling to use globally but make sure everything still works properly
 
 .card-container {
     margin: $section-separator;
@@ -190,7 +190,7 @@ body {
                 transform: $transform-hover;
             }
         }
-        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(7) {
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
             .card-img-fit {
                 object-position: 100% 25%;
             }
@@ -212,9 +212,19 @@ body {
 
 // Set object-position for each portrait where required
 
-#bio-portrait-anwar {
+#bio-portrait-daiod {
     object-position: 0% 25%;
 }
+
+// Volunteer Form Page
+
+
+.form-wrapper {
+    .message-input-box {
+        height: 150px;
+    }
+}
+
 
 /* Footer */
 .footer-container {
