@@ -1,16 +1,17 @@
 body {
-  font-family: Anuphan, sans-serif;
+  font-family: "Yeseva One", sans-serif;
   min-height: 100dvh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: minmax(0, 1fr);
 }
 
-.navbar-brand {
-  height: 30px;
+.navbar {
+  min-height: 75px;
 }
-.navbar-brand #nav-logo {
-  height: 100%;
+
+#nav-logo {
+  height: 50px;
 }
 
 .custom-btn {
@@ -33,17 +34,22 @@ body {
 }
 
 #donateBtn {
-  background-color: #e9b184;
-  font-size: 20px;
-  border-radius: 15px;
-  padding: 4px 10px;
-  border: 3px solid;
-  height: 35px;
+  background-color: #1D7061;
+  color: white;
+  border: none;
+  border-radius: 16px;
   cursor: pointer;
 }
 #donateBtn:hover {
-  background-color: #5b2b04;
-  color: white;
+  background-color: #1e1e1e;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.heading-text {
+  font-family: "Yeseva One", sans-serif;
 }
 
 .full-width-container {
@@ -51,25 +57,12 @@ body {
   background-color: #fedec3;
 }
 
-.homepage-container {
-  margin: 10px;
-  padding: 10px;
-  background-color: #f8f9fa;
-  border: 5px solid #e9b184;
+.homepage-carousel .carousel-item {
+  max-height: 500px;
 }
-
-.carousel-container .gradient {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(to top, black, transparent 40%);
-}
-.carousel-container .carousel-item {
-  height: calc(70vh - 55.6px);
-}
-.carousel-container .c-img {
-  -o-object-fit: cover !important;
-     object-fit: cover !important;
+.homepage-carousel .carousel-img {
+  -o-object-fit: contain;
+     object-fit: contain;
   height: 100%;
   width: 100%;
 }
@@ -142,7 +135,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .hero-section-volunteer-page #volunteer-hero-img {
-    height: calc(100vh - 55.6px);
+    height: calc(100vh - 75px);
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
