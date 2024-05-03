@@ -1,6 +1,7 @@
 // VARIABLES
 
 $primary-color: #e9b184;
+$primary-color-2: #1D7061;
 $primary-lighter: #fedec3;
 
 $secondary-color: #0a83e5;
@@ -8,11 +9,11 @@ $secondary-darker: #044f8c;
 
 $tertiary-color: #7A518E;
 
-$btn-color: #1D7061;
+$footer-color: #3A3A3A;
 
-$card-background-color: #f8f9fa;
+$card-background-color: white;
 
-$btn-border-radius: 50px;
+$btn-border-radius: 16px;
 
 $default-padding: 20px;
 
@@ -24,7 +25,7 @@ $card-height: 100%;
 $navbar-height: 75px;
 $header-footer-color: #f8f9fa;
 
-$card-border-radius: 20px;
+$card-border-radius: 50px;
 
 $transition: 0.2s ease;
 
@@ -64,22 +65,25 @@ body {
 
 
 // Navbar
+
 .navbar {
-   min-height: $navbar-height;
+    z-index: 100;
+    #nav-logo {
+        height: 49px;
+        // Sets total height of navbar to 75px - issues with setting min-height directly on navbar as this makes brand and icon shift up slightly when expanding
+    }
 }
-#nav-logo {
-    height: 45px;
-}
+
 
 // Button Design
 
 .custom-btn {
     color: white;
-    background-color: $btn-color;
+    background-color: $primary-color-2;
     border-radius: $btn-border-radius;
     border: none;
     transition: $transition;
-    box-shadow: 0px 5px 5px 0px grey;
+    // box-shadow: 0px 5px 5px 0px grey;
     &:hover {
         color: white;
         background-color: #1e1e1e; // Change?
@@ -100,46 +104,27 @@ body {
 // Fonts
 
 body {
-    font-family: "Josefin Sans", sans-serif
-}
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Yeseva One", sans-serif;
-}
-
-// Container with a #fedec3 background covering full page width
-.full-width-container {
-    padding: $default-padding;
-    background-color: $primary-lighter;
+    font-family: "Josefin Sans", sans-serif;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Yeseva One", sans-serif;
+    }
 }
 
-// .container-heading {
-//     padding: $container-heading-padding;
-// }
+// Hero - mobile
+
+.hero-section {
+    min-height: calc(100vh - $navbar-height);
+    .hero-text-container {
+        padding: $default-padding;
+        background-color: white;
+    }
+}
+
+
 
 // END UNIVERSAL BEHAVIOUR
 
 // SASS
-
-// .homepage-container {
-//     margin: 10px;
-//     padding: 10px;
-//     background-color: $card-background-color;
-//     border: 5px solid $primary-color;
-// }
-
-.homepage-carousel {
-    // width: 100%;
-    .carousel-item {
-        max-height: 500px;
-        // object-fit: contain;
-    }
-    .carousel-img {
-        object-fit: contain;
-        height: 100%;
-        width: 100%;
-    }
-}
-
 
 // VOLUNTEER PAGE
 
@@ -217,32 +202,20 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 .footer-container {
-    height: 100px;
-    width: 100%;
-    // color: white;
-    background-color: $primary-lighter;
+    height: 525px;
+    // width: 100%;
+    color: white;
+    background-color: $footer-color;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3%;
+    // gap: 3%;
     text-align: center;
     position: static;
-    .fa-brands:hover {
-        color: $primary-color;
-    }
-    .footer-text { 
-        // color: white;
-        text-align: center;
-        width: 100%;
-        // padding: 15px 0;
-    }
+    // .fa-brands:hover {
+    //     color: $primary-color;
+    // }
 }
-
-// a {
-//     text-decoration: none;
-//     color: white;
-// }
-
 
 // END SASS
 
@@ -251,19 +224,29 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (min-width: 768px) {
 
-    // Change position of 'Volunteer With Us' section
     .hero-section {
-        #volunteer-hero-img {
+        // Set global style for all hero images in tablet/desktop
+        img {
             height: calc(100vh - $navbar-height);
             width: 100%;
             object-fit: cover;
         }
-        #floating-card-container {
+        // Set image-specific positioning
+        #homepage-hero-img {
+            object-position: 50% 0%;
+        }
+        // Position card in tablet/desktop
+        .hero-text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             right: 10%;
-            width: 325px;
+            width: 400px;
+            height: 400px;
+            padding: 50px;
             border-radius: $card-border-radius;
         }
     }
