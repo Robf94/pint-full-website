@@ -68,37 +68,19 @@ body {
 }
 
 // Image holder
-@mixin square-image() {
-    height: 310px;
-    width: 350px;
+@mixin image-card() {
+    height: 55%; // Pass height and width as arguments so they can be amended between different image cards - some need to be, and stay square
+    width: 60%;
+    position: relative; // also pass this as optional argument? initialise as default
     img {
         height: 100%;
-        width: 100%;
         object-fit: cover;
         object-position: 50% 50%;
         border-radius: $volunteer-card-border-radius;
     }
 }
 
-.what-we-do-image-container {
-    background-color: #0a83e5;
-    .image-holder-wrapper {
-        background-color: darkgreen;
-        width: auto;
-    }
-    .square-image-holder {
-        @include square-image();
-        position: relative;
-        &:nth-child(1) {
-            // top: 0%;
-            // left: 10%;
-            // transform: translate(10%, 10%);
-        }
-        &:nth-child(2) {
-            // transform: translate(-10%, -10%);
-        }
-    }
-}
+
 
 
 // END MIXINS
@@ -249,7 +231,7 @@ body {
 
 // MEDIA QUERIES
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
 
     .hero-section {
         // Set global style for all hero images in tablet/desktop
@@ -278,6 +260,19 @@ body {
         }
     }
 
+    .image-card-holder {
+        @include image-card();
+        &:nth-child(1) {
+            top: 0%;
+            left: 5%;
+            margin-bottom: -5%;
+        }
+        &:nth-child(2) {
+            bottom: 0%;
+            right: 5%;
+            margin-top: -5%;
+        }
+    }
 }
 
 // END MEDIA QUERIES
