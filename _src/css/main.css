@@ -31,6 +31,24 @@ body {
   transform: scale(0.99);
 }
 
+#donate-section-btn {
+  color: black;
+  background-color: white;
+  border-radius: 16px;
+  border: none;
+  transition: 0.2s ease;
+}
+#donate-section-btn:hover {
+  color: black;
+  background-color: white;
+  transform: scale(1.01);
+}
+#donate-section-btn:active {
+  color: black !important;
+  background-color: white !important;
+  transform: scale(0.99);
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
 }
@@ -39,17 +57,28 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .hero-section {
-  min-height: calc(100vh - 75px);
+  min-height: calc(50vh - 37.5px);
 }
 .hero-section .hero-text-container {
   padding: 20px;
   background-color: #f8f9fa;
 }
 
+.image-card-holder {
+  height: 100%;
+  width: 100%;
+  position: inherit;
+}
+.image-card-holder img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+}
+
 .assistance-donate-tab {
+  color: white;
   background-color: #1D7061;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
 }
 
 .card-container {
@@ -137,27 +166,35 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     height: 400px;
     padding: 50px;
   }
+  .assistance-donate-tab {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
   .image-card-holder {
-    height: 55%;
-    width: 60%;
+    height: 60%;
+    width: 50%;
     position: relative;
+    aspect-ratio: 1/1;
   }
   .image-card-holder img {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: 50% 50%;
-       object-position: 50% 50%;
     border-radius: 25px;
   }
   .image-card-holder:nth-child(1) {
-    top: 0%;
-    left: 5%;
     margin-bottom: -5%;
   }
+  .image-card-holder:nth-child(1) img {
+    -o-object-position: 40% 0%;
+       object-position: 40% 0%;
+  }
   .image-card-holder:nth-child(2) {
-    bottom: 0%;
-    right: 5%;
     margin-top: -5%;
+    margin-left: 20%;
+  }
+  .image-card-holder:nth-child(2) img {
+    -o-object-position: 10% 0%;
+       object-position: 10% 0%;
   }
 }

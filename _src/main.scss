@@ -68,20 +68,16 @@ body {
 }
 
 // Image holder
-@mixin image-card() {
-    height: 55%; // Pass height and width as arguments so they can be amended between different image cards - some need to be, and stay square
-    width: 60%;
-    position: relative; // also pass this as optional argument? initialise as default
+@mixin image-card($height: 100%, $width: 100%, $position: inherit) {
+    height: $height;
+    width: $width;
+    position: $position;
     img {
         height: 100%;
         object-fit: cover;
-        object-position: 50% 50%;
         border-radius: $volunteer-card-border-radius;
     }
 }
-
-
-
 
 // END MIXINS
 
@@ -98,24 +94,37 @@ body {
 }
 
 // Button Design
-.custom-btn {
-    color: white;
-    background-color: $primary-color-2;
+
+@mixin custom-btn($color, $background-color, $hover-color, $hover-bg-color) {
+    color: $color;
+    background-color: $background-color;
     border-radius: $btn-border-radius;
     border: none;
     transition: $transition;
-    // box-shadow: 0px 5px 5px 0px grey;
     &:hover {
-        color: white;
-        background-color: #1e1e1e; // Change?
+        color: $hover-color;
+        background-color: $hover-bg-color;
         transform: $transform-hover;
     }
     &:active {
-        color: white !important;
-        background-color: #1e1e1e !important; // Change?
+        color: $hover-color !important;
+        background-color: $hover-bg-color !important;
         transform: $transform-active;
     }
 }
+
+// Button includes
+.custom-btn {
+    @include custom-btn(white, $primary-color-2, white, #1e1e1e);
+    // Consider changing hover-bg-color
+}
+
+// Button in homepage donate section
+#donate-section-btn {
+    @include custom-btn(black, white, black, white);
+}
+
+
 
 // END GLOBAL ELEMENTS
 
@@ -131,7 +140,7 @@ body {
 
 // Hero - mobile
 .hero-section {
-    min-height: calc(100vh - $navbar-height);
+    min-height: calc(50vh - $navbar-height / 2);
     // Style so that image takes up empty space if content below is short
     .hero-text-container {
         padding: $default-padding;
@@ -145,11 +154,13 @@ body {
 
 // HOMEPAGE
 
+.image-card-holder {
+    @include image-card();
+}
 
 .assistance-donate-tab {
+    color: white;
     background-color: #1D7061;
-    border-top-left-radius: $hero-card-border-radius;
-    border-bottom-left-radius: $hero-card-border-radius;
 }
 
 // VOLUNTEER PAGE
@@ -260,17 +271,26 @@ body {
         }
     }
 
+    .assistance-donate-tab {
+        border-top-left-radius: $hero-card-border-radius;
+        border-bottom-left-radius: $hero-card-border-radius;
+    }
+
     .image-card-holder {
-        @include image-card();
+        @include image-card(60%, 50%, relative);
+        aspect-ratio: 1/1;
         &:nth-child(1) {
-            top: 0%;
-            left: 5%;
             margin-bottom: -5%;
+            img {
+                object-position: 40% 0%;
+            }
         }
         &:nth-child(2) {
-            bottom: 0%;
-            right: 5%;
             margin-top: -5%;
+            margin-left: 20%;
+            img {
+                object-position: 10% 0%;
+            }
         }
     }
 }
