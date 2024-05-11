@@ -52,6 +52,9 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto; // Sets heights to header: auto; body: 1fr; footer: auto so that header and footer take up as much space depending on how much content is inside of them. Body expands if there is available space after adding necessary content
     grid-template-columns: minmax(0, 1fr); // Prevents page scrolling horizontally if there is content inside that is wider than the screen
+    li {
+        list-style: none;
+    }
 }
 
 // END RESETS
@@ -163,6 +166,10 @@ body {
     background-color: #1D7061;
 }
 
+.carousel-img {
+    border-radius: $hero-card-border-radius;
+}
+
 // VOLUNTEER PAGE
 
 // Rearrange card styling to mixin but make sure everything still works properly
@@ -235,6 +242,9 @@ body {
     // .fa-brands:hover {
     //     color: $primary-color;
     // }
+    .footer-logo-img {
+        width: 100px;
+    }
 }
 
 // END SASS

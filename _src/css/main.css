@@ -5,6 +5,9 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: minmax(0, 1fr);
 }
+body li {
+  list-style: none;
+}
 
 .navbar {
   z-index: 100;
@@ -81,6 +84,10 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   background-color: #1D7061;
 }
 
+.carousel-img {
+  border-radius: 50px;
+}
+
 .card-container {
   margin: 30px 0;
 }
@@ -137,6 +144,9 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   justify-content: center;
   text-align: center;
   position: static;
+}
+.footer-container .footer-logo-img {
+  width: 100px;
 }
 
 @media (min-width: 768px) {
