@@ -52,7 +52,13 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto; // Sets heights to header: auto; body: 1fr; footer: auto so that header and footer take up as much space depending on how much content is inside of them. Body expands if there is available space after adding necessary content
     grid-template-columns: minmax(0, 1fr); // Prevents page scrolling horizontally if there is content inside that is wider than the screen
-    li {
+    // Anchor link style reset from Bootstrap default
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    // List style reset
+    ul {
         list-style: none;
     }
 }
@@ -97,13 +103,13 @@ body {
 }
 
 // Button Design
-
 @mixin custom-btn($color, $background-color, $hover-color, $hover-bg-color) {
     color: $color;
     background-color: $background-color;
     border-radius: $btn-border-radius;
     border: none;
     transition: $transition;
+    padding: 10px;
     &:hover {
         color: $hover-color;
         background-color: $hover-bg-color;
@@ -146,7 +152,6 @@ body {
     min-height: calc(50vh - $navbar-height / 2);
     // Style so that image takes up empty space if content below is short
     .hero-text-container {
-        padding: $default-padding;
         background-color: $card-background-color;
     }
 }
@@ -168,6 +173,33 @@ body {
 
 .carousel-img {
     border-radius: $hero-card-border-radius;
+}
+
+.quote-card {
+    @include card-base-style($volunteer-card-border-radius);
+    background-color: #0a83e5;
+}
+
+.stat-card {
+    @include card-base-style($volunteer-card-border-radius);
+    background-color: #0a83e5;
+    height: 175px;
+    // width: 230px;
+    position: relative;
+    margin-top: 25px; // Take into account the positioning of the green icon
+    .circle-icon {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        background-color: $primary-color-2;
+        border-radius: 50%;
+        position: absolute;
+        top: -25px;
+        img {
+            height: 100%;
+            width: 100%;
+        };
+    }
 }
 
 // VOLUNTEER PAGE
@@ -245,6 +277,12 @@ body {
     .footer-logo-img {
         width: 100px;
     }
+    .footer-list {
+        padding: 0;
+    }
+    // button {
+    //     width: 100%;
+    // }
 }
 
 // END SASS
@@ -277,7 +315,6 @@ body {
             right: 10%;
             width: 400px;
             height: 400px;
-            padding: 50px;
         }
     }
 
