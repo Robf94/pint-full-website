@@ -27,7 +27,7 @@ $volunteer-card-height: 100%;
 $navbar-height: 75px;
 $header-footer-color: #f8f9fa;
 
-
+$padding-desktop: 12rem;
 
 $transition: 0.2s ease;
 
@@ -261,28 +261,21 @@ body {
 
 /* Footer */
 .footer-container {
-    height: 525px;
-    // width: 100%;
+    height: 525px; // change?
     color: white;
     background-color: $footer-color;
     display: flex;
     align-items: center;
     justify-content: center;
-    // gap: 3%;
     text-align: center;
     position: static;
-    // .fa-brands:hover {
-    //     color: $primary-color;
-    // }
     .footer-logo-img {
         width: 100px;
+        margin-bottom: 0.5rem;
     }
     .footer-list {
         padding: 0;
     }
-    // button {
-    //     width: 100%;
-    // }
 }
 
 // END SASS
@@ -290,7 +283,7 @@ body {
 
 // MEDIA QUERIES
 
-@media (min-width: 768px) {
+@media screen and (min-width: 992px) {
 
     .hero-section {
         // Set global style for all hero images in tablet/desktop
@@ -318,9 +311,41 @@ body {
         }
     }
 
+    .what-we-do {
+        padding-left: $padding-desktop;
+        padding-right: $padding-desktop;
+    }
+
+    .street-community {
+        padding-left: $padding-desktop;
+        padding-right: $padding-desktop;
+
+        text-align: center;
+    }
+
+    .assistance {
+        text-align: center;
+    }
+
+    .assistance-volunteer-tab {
+        padding: 75px 75px 75px $padding-desktop;
+    }
+
     .assistance-donate-tab {
         border-top-left-radius: $hero-card-border-radius;
         border-bottom-left-radius: $hero-card-border-radius;
+
+        padding: 75px $padding-desktop 75px 75px;
+    }
+
+    .words-from-volunteers {
+        padding-left: $padding-desktop;
+        padding-right: $padding-desktop;
+    }
+
+    .statistics {
+        padding-left: $padding-desktop;
+        padding-right: $padding-desktop;
     }
 
     .image-card-holder {
