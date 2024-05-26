@@ -8,9 +8,45 @@ function activeLinks() {
             link.setAttribute("aria-current", "page");
         }
     });
-    return pageName;
+    // return pageName;
 };
 
 activeLinks();
 
 // End activeLinks
+
+// Swiper
+
+const swiper = new Swiper('.swiper', {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 30,
+
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        }
+    },
+
+    // Autoplay
+    // autoplay: {
+    //     disableOnInteraction: false,
+    // },
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+});
+  
+// End Swiper

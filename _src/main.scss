@@ -27,7 +27,7 @@ $volunteer-card-height: 100%;
 $navbar-height: 75px;
 $header-footer-color: #f8f9fa;
 
-$padding-desktop: 12rem;
+$padding-desktop: 15%;
 
 $transition: 0.2s ease;
 
@@ -36,6 +36,7 @@ $transform-active: scale(0.99);
 
 $shadow-cards: 0px 10px 10px 0px #c5c5c5b3;
 
+$quote-card-bg: url('/assets/quote-marks.jpg');
 
 // END VARIABLES
 
@@ -73,7 +74,6 @@ body {
     border-radius: $card-border-radius;
     background-color: $card-background-color;
     text-decoration: none;
-    border: none;
 }
 
 // Image holder
@@ -133,8 +133,15 @@ body {
     @include custom-btn(black, white, black, white);
 }
 
+// Swiper
 
+.swiper-img {
+    border-radius: $hero-card-border-radius;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
 
+  
 // END GLOBAL ELEMENTS
 
 // UNIVERSAL BEHAVIOUR
@@ -171,13 +178,13 @@ body {
     background-color: #1D7061;
 }
 
-.carousel-img {
-    border-radius: $hero-card-border-radius;
-}
-
 .quote-card {
     @include card-base-style($volunteer-card-border-radius);
-    background-color: #0a83e5;
+    background-image: $quote-card-bg;
+    background-size: cover;
+    background-position: right bottom;
+    position: relative;
+    overflow: hidden;
 }
 
 .stat-card {
@@ -200,6 +207,12 @@ body {
             width: 100%;
         };
     }
+}
+
+.green-wave-container {
+    background-image: url('/assets/green-vector.svg');
+    background-size: cover;
+    background-position: bottom;
 }
 
 // VOLUNTEER PAGE
@@ -341,6 +354,9 @@ body {
     .words-from-volunteers {
         padding-left: $padding-desktop;
         padding-right: $padding-desktop;
+        h2 {
+            text-align: center;
+        }
     }
 
     .statistics {

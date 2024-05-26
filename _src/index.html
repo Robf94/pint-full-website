@@ -14,22 +14,19 @@ floatingCardBtnText: Link to where?
 {% include "hero-section.njk" %}
 
 <section class="container-fluid what-we-do mt-3">
-    <!-- <div class="row m-md-5 gx-5"> -->
-    <div class="row align-items-center justify-content-between">
+    <div class="row align-items-center">
         <div class="col-12 col-lg-6 p-md-0">
             <h2>What we do</h2>
             <p>One of our key principles as an organisation is outreach work. Twice a day, our volunteers go out into UK cities, seeking out those sleeping rough, and provide them with various supplies. The packages assembled by our volunteers range from hot meals, snacks, and water, to essentials including wet wipes, toothbrushes, socks, and underwear. We perform these outreaches, making sure that those on the streets know that we are coming, and that support will soon be with them.</p>
             <p>Another aspect of our work is providing aid for those locally in Westminster, Wandsworth, And Lambeth. When we are able to, we also provide emergency assistance. We provide regular support to the elderly and vulnerable confined to their homes by bringing them food parcels. Every week we help between 600-700 people of various ages, ethnicities, and genders.</p>
         </div>
         <div class="col-md-10 col-lg-6 gap-2 gap-md-0 p-md-0 d-flex flex-column what-we-do-image-wrapper">
-
             <div class="image-card-holder align-self-end">
                 <img src="/assets/IMG-20240121-WA0036.jpg" class="img-fluid what-we-do-img" alt="Photograph of volunteers facing away from the camera, showing the People In Need Today logo on their high-visibility jackets.">
             </div>
             <div class="image-card-holder align-self-start">
                 <img src="/assets/IMG-20240121-WA0024.jpg" class="img-fluid what-we-do-img" alt="Photograph of volunteers smiling at the camera, giving away food bags.">
             </div>
-
         </div>
     </div>
 </section>
@@ -41,7 +38,7 @@ floatingCardBtnText: Link to where?
             <p>Our work, from its humble beginnings, extends to many young teens and adults on the streets with mentorship and help toward steering them in the right direction.</p>
             <p>As advocates for young people, we believe in providing them with the confidence to seek out and create opportunities. Whether musical interest, sporting, or even business ideas, we always try to support individuals in achieving their ambitions.</p>
         </div>
-        <div class="col-md-6 p-md-0">
+        <!-- <div class="col-md-6 p-md-0">
             <div id="carouselExampleAutoplaying" class="carousel slide homepage-carousel" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -63,8 +60,41 @@ floatingCardBtnText: Link to where?
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
-        </div>
+        </div> -->
     </div>
+
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="/assets/IMG-20240121-WA0035.jpg" class="img-fluid h-100 w-100 swiper-img" alt="...">
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/IMG-20240121-WA0028.jpg" class="img h-100 w-100 swiper-img" alt="...">
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/IMG-20240121-WA0030.jpg" class="img h-100 w-100 swiper-img" alt="...">
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/IMG-20240121-WA0035.jpg" class="img h-100 w-100 swiper-img" alt="...">
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/IMG-20240121-WA0035.jpg" class="img h-100 w-100 swiper-img" alt="...">
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/IMG-20240121-WA0035.jpg" class="img h-100 w-100 swiper-img" alt="...">
+            </div>
+        </div>
+        <!-- Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+  
 </section>
 
 <section class="container-fluid mt-3 assistance">
@@ -84,74 +114,76 @@ floatingCardBtnText: Link to where?
     </div>
 </section>
 
-<section class="container-fluid mt-3 words-from-volunteers">
-    <div class="row">
-        <div class="col-12">
-            <h2>Words from our volunteers</h2>
-        </div>
-    </div>
-    <div class="row g-3">
-        <div class="col-12 col-md-6 col-lg-6">
-            <div class="quote-card p-5">
-                <!-- <img class="img-fluid" src="/assets/quote-marks.jpg" alt="Card background showing quotation marks"> -->
-                <h4>John D.</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tenetur cupiditate doloremque eligendi, quia magni non ea, possimus nostrum aut atque aliquid voluptate? Corrupti, dolorum repellendus aperiam enim et illum?</p>
+<div class="green-wave-container">
+    <section class="container-fluid mt-3 words-from-volunteers">
+        <div class="row row-cols-12">
+            <div class="col">
+                <h2>Words from our volunteers</h2>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-6">
-            <div class="quote-card p-5">
-                <!-- <img class="img-fluid" src="/assets/quote-marks.jpg" alt="Card background showing quotation marks"> -->
-                <h4>John D.</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tenetur cupiditate doloremque eligendi, quia magni non ea, possimus nostrum aut atque aliquid voluptate? Corrupti, dolorum repellendus aperiam enim et illum?</p>
+        <div class="row g-3 row-cols-1 row-cols-md-3 row-cols-lg-2 row-cols-xl-3">
+            <div class="col">
+                <div class="card quote-card p-3 p-lg-5">
+                    <h4>John D.</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tenetur cupiditate doloremque eligendi, quia magni non ea, possimus nostrum aut atque aliquid voluptate? Corrupti, dolorum repellendus aperiam enim et illum?</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card quote-card p-3 p-lg-5">
+                    <h4>John D.</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tenetur cupiditate doloremque eligendi, quia magni non ea, possimus nostrum aut atque aliquid voluptate? Corrupti, dolorum repellendus aperiam enim et illum?</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card quote-card p-3 p-lg-5">
+                    <h4>John D.</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tenetur cupiditate doloremque eligendi, quia magni non ea, possimus nostrum aut atque aliquid voluptate? Corrupti, dolorum repellendus aperiam enim et illum?</p>
+                </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-6">
-            <div class="quote-card p-5">
-                <!-- <img class="img-fluid" src="/assets/quote-marks.jpg" alt="Card background showing quotation marks"> -->
-                <h4>John D.</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tenetur cupiditate doloremque eligendi, quia magni non ea, possimus nostrum aut atque aliquid voluptate? Corrupti, dolorum repellendus aperiam enim et illum?</p>
+    </section>
+    
+    <section class="container-fluid my-3 statistics">
+        <div class="row gy-3">
+            <div class="col-6 col-md-3">
+                <div class="card stat-card d-flex flex-column align-items-center justify-content-center text-center">
+                    <div class="circle-icon">
+                        <img src="/assets/small-icons/hand-heart.png" alt="Icon of two hands cupping a heart">
+                    </div>
+                    <h1>50+</h1>
+                    <p>Volunteers</p>
+                </div>
+    
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card stat-card d-flex flex-column align-items-center justify-content-center text-center">
+                    <div class="circle-icon">
+                        <img src="/assets/small-icons/coffee.png" alt="Icon of two hands cupping a heart">
+                    </div>
+                    <h1>2400+</h1>
+                    <p>meals and food packs, monthly</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card stat-card d-flex flex-column align-items-center justify-content-center">
+                    <div class="circle-icon">
+                        <img src="/assets/small-icons/donations.png" alt="Icon of two hands cupping a heart">
+                    </div>
+                    <h1>50+</h1>
+                    <p>Volunteers</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card stat-card d-flex flex-column align-items-center justify-content-center">
+                    <div class="circle-icon">
+                        <img src="/assets/small-icons/location.png" alt="Icon of two hands cupping a heart">
+                    </div>
+                    <h1>50+</h1>
+                    <p>Volunteers</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
-<section class="container-fluid my-3 statistics">
-    <div class="row gy-3">
-        <div class="col-6 col-md-3">
-            <div class="stat-card d-flex flex-column align-items-center justify-content-center">
-                <div class="circle-icon">
-                    <img src="/assets/small-icons/hand-heart.png" alt="Icon of two hands cupping a heart">
-                </div>
-                <h1>50+</h1>
-                <span>Volunteers</span>
-            </div>
-        </div>
-        <div class="col-6 col-md-3">
-            <div class="stat-card d-flex flex-column align-items-center justify-content-center">
-                <div class="circle-icon">
-                    <img src="/assets/small-icons/coffee.png" alt="Icon of two hands cupping a heart">
-                </div>
-                <h1>2400+</h1>
-                <span>meals and food packs, monthly</span>
-            </div>
-        </div>
-        <div class="col-6 col-md-3">
-            <div class="stat-card d-flex flex-column align-items-center justify-content-center">
-                <div class="circle-icon">
-                    <img src="/assets/small-icons/donations.png" alt="Icon of two hands cupping a heart">
-                </div>
-                <h1>50+</h1>
-                <span>Volunteers</span>
-            </div>
-        </div>
-        <div class="col-6 col-md-3">
-            <div class="stat-card d-flex flex-column align-items-center justify-content-center">
-                <div class="circle-icon">
-                    <img src="/assets/small-icons/location.png" alt="Icon of two hands cupping a heart">
-                </div>
-                <h1>50+</h1>
-                <span>Volunteers</span>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Partner section -->

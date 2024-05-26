@@ -58,6 +58,12 @@ body ul {
   transform: scale(0.99);
 }
 
+.swiper-img {
+  border-radius: 50px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
 }
@@ -79,8 +85,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 .image-card-holder img {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 25px;
 }
 
@@ -89,23 +94,21 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   background-color: #1D7061;
 }
 
-.carousel-img {
-  border-radius: 50px;
-}
-
 .quote-card {
   border-radius: 25px;
   background-color: #f8f9fa;
   text-decoration: none;
-  border: none;
-  background-color: #0a83e5;
+  background-image: url("/assets/quote-marks.jpg");
+  background-size: cover;
+  background-position: right bottom;
+  position: relative;
+  overflow: hidden;
 }
 
 .stat-card {
   border-radius: 25px;
   background-color: #f8f9fa;
   text-decoration: none;
-  border: none;
   background-color: #0a83e5;
   height: 175px;
   position: relative;
@@ -125,6 +128,12 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   width: 100%;
 }
 
+.green-wave-container {
+  background-image: url("/assets/green-vector.svg");
+  background-size: cover;
+  background-position: bottom;
+}
+
 .card-container {
   margin: 30px 0;
 }
@@ -132,15 +141,13 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   border-radius: 25px;
   background-color: #f8f9fa;
   text-decoration: none;
-  border: none;
   height: 100%;
   transition: 0.2s ease;
   box-shadow: 0px 10px 10px 0px rgba(197, 197, 197, 0.7019607843);
 }
 .card-container .card-col .card-volunteer .card-img-fit {
   aspect-ratio: 5/3;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
@@ -148,8 +155,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   transform: scale(1.01);
 }
 .card-container .card-col:nth-child(1) .card-img-fit, .card-container .card-col:nth-child(2) .card-img-fit, .card-container .card-col:nth-child(3) .card-img-fit, .card-container .card-col:nth-child(4) .card-img-fit, .card-container .card-col:nth-child(5) .card-img-fit, .card-container .card-col:nth-child(6) .card-img-fit, .card-container .card-col:nth-child(7) .card-img-fit {
-  -o-object-position: 100% 25%;
-     object-position: 100% 25%;
+  object-position: 100% 25%;
 }
 
 .volunteer-bio-main {
@@ -158,13 +164,11 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 .volunteer-bio-main .bio-portrait {
   width: 100%;
   aspect-ratio: 1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 #bio-portrait-daiod {
-  -o-object-position: 0% 25%;
-     object-position: 0% 25%;
+  object-position: 0% 25%;
 }
 
 .form-wrapper .message-input-box {
@@ -194,18 +198,15 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   .hero-section img {
     height: calc(100vh - 75px);
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .hero-section #homepage-hero-img {
-    -o-object-position: 50% 0%;
-       object-position: 50% 0%;
+    object-position: 50% 0%;
   }
   .hero-section .md-hero-card {
     border-radius: 50px;
     background-color: #f8f9fa;
     text-decoration: none;
-    border: none;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -217,32 +218,35 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     height: 400px;
   }
   .what-we-do {
-    padding-left: 12rem;
-    padding-right: 12rem;
+    padding-left: 15%;
+    padding-right: 15%;
   }
   .street-community {
-    padding-left: 12rem;
-    padding-right: 12rem;
+    padding-left: 15%;
+    padding-right: 15%;
     text-align: center;
   }
   .assistance {
     text-align: center;
   }
   .assistance-volunteer-tab {
-    padding: 75px 75px 75px 12rem;
+    padding: 75px 75px 75px 15%;
   }
   .assistance-donate-tab {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    padding: 75px 12rem 75px 75px;
+    padding: 75px 15% 75px 75px;
   }
   .words-from-volunteers {
-    padding-left: 12rem;
-    padding-right: 12rem;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .words-from-volunteers h2 {
+    text-align: center;
   }
   .statistics {
-    padding-left: 12rem;
-    padding-right: 12rem;
+    padding-left: 15%;
+    padding-right: 15%;
   }
   .image-card-holder {
     height: 60%;
@@ -252,23 +256,20 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   }
   .image-card-holder img {
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-radius: 25px;
   }
   .image-card-holder:nth-child(1) {
     margin-bottom: -5%;
   }
   .image-card-holder:nth-child(1) img {
-    -o-object-position: 40% 0%;
-       object-position: 40% 0%;
+    object-position: 40% 0%;
   }
   .image-card-holder:nth-child(2) {
     margin-top: -5%;
     margin-left: 20%;
   }
   .image-card-holder:nth-child(2) img {
-    -o-object-position: 10% 0%;
-       object-position: 10% 0%;
+    object-position: 10% 0%;
   }
 }
