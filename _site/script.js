@@ -32,15 +32,15 @@ const swiper = new Swiper('.swiper', {
     },
 
     // Autoplay
-    // autoplay: {
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        disableOnInteraction: false,
+    },
   
     // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      dynamicBullets: true,
-    },
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   dynamicBullets: true,
+    // },
   
     // Navigation arrows
     navigation: {
