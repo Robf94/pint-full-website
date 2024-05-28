@@ -296,7 +296,34 @@ body {
 
 // MEDIA QUERIES
 
+// @media screen and (max-width: 767px) {
+//     .custom-btn {
+//         width: 100%;
+//     }
+// }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .assistance-donate-tab {
+        padding: 1rem;
+        border-top-left-radius: $hero-card-border-radius;
+        border-bottom-left-radius: $hero-card-border-radius;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    // Sets padding for green background donate section on homepage
+    .assistance-donate-tab {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
 @media screen and (min-width: 992px) {
+
+    .nav-container {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
 
     .hero-section {
         // Set global style for all hero images in tablet/desktop
@@ -318,7 +345,7 @@ body {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            right: 10%;
+            right: 15%;
             width: 400px;
             height: 400px;
         }
