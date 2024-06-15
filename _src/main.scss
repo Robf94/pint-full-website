@@ -1,7 +1,8 @@
 // VARIABLES
 
 $primary-color: #e9b184;
-$primary-color-2: #1D7061;
+// $primary-color-2: #1D7061;
+$primary-color-2: #E46C0A;
 $primary-lighter: #fedec3;
 
 $secondary-color: #0a83e5;
@@ -35,8 +36,6 @@ $transform-hover: scale(1.01);
 $transform-active: scale(0.99);
 
 $shadow-cards: 0px 10px 10px 0px #c5c5c5b3;
-
-$quote-card-bg: url('/assets/quote-marks.jpg');
 
 // END VARIABLES
 
@@ -175,12 +174,28 @@ body {
 
 .assistance-donate-tab {
     color: white;
-    background-color: #1D7061;
+    background-color: $primary-color-2;
+}
+
+.orange-wave-container {
+    background-image: url('/assets/orange-vector.svg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.partner-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    .partner-logo {
+        width: 100px;
+    }
 }
 
 .quote-card {
     @include card-base-style($volunteer-card-border-radius);
-    background-image: $quote-card-bg;
+    background-image: url('/assets/quote-marks.jpg');
     background-size: cover;
     background-position: right bottom;
     position: relative;
@@ -189,12 +204,14 @@ body {
 
 .stat-card {
     @include card-base-style($volunteer-card-border-radius);
-    background-color: #0a83e5;
     height: 175px;
     // width: 230px;
     position: relative;
-    margin-top: 25px; // Take into account the positioning of the green icon
+    margin-top: 25px; // Take into account the positioning of the orange icon
     .circle-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 50px;
         height: 50px;
         padding: 10px;
@@ -202,17 +219,10 @@ body {
         border-radius: 50%;
         position: absolute;
         top: -25px;
-        img {
-            height: 100%;
-            width: 100%;
+        .stat-icon {
+            color: white;
         };
     }
-}
-
-.green-wave-container {
-    background-image: url('/assets/green-vector.svg');
-    background-size: cover;
-    background-position: bottom;
 }
 
 // VOLUNTEER PAGE
@@ -221,27 +231,28 @@ body {
 
 .card-container {
     margin: $section-separator;
-    .card-col {
-        .card-volunteer {
-            @include card-base-style($card-border-radius: $volunteer-card-border-radius);
-            height: $volunteer-card-height;
-            transition: $transition;
-            box-shadow: $shadow-cards;
-            .card-img-fit {
-                aspect-ratio: 5 / 3;
-                // alter positions for nth images
-                object-fit: cover;
-                border-top-left-radius: $volunteer-card-border-radius;
-                border-top-right-radius: $volunteer-card-border-radius;
-            }
-            &:hover {
-                transform: $transform-hover;
-            }
+
+    .card-volunteer {
+        @include card-base-style($card-border-radius: $volunteer-card-border-radius);
+        transition: $transition;
+        box-shadow: $shadow-cards;
+        padding: 16px;
+        height: 100%;
+        .card-img-fit {
+            // alter positions for nth images
+            // height: 50%;
+            aspect-ratio: 5/3;
+            object-fit: cover;
+            border-top-left-radius: $volunteer-card-border-radius;
+            border-top-right-radius: $volunteer-card-border-radius;
         }
-        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
-            .card-img-fit {
-                object-position: 100% 25%;
-            }
+        &:hover {
+            transform: $transform-hover;
+        }
+    }
+    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+        .card-img-fit {
+            object-position: 100% 25%;
         }
     }
 }
@@ -296,12 +307,6 @@ body {
 
 // MEDIA QUERIES
 
-// @media screen and (max-width: 767px) {
-//     .custom-btn {
-//         width: 100%;
-//     }
-// }
-
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .assistance-donate-tab {
         padding: 1rem;
@@ -320,13 +325,14 @@ body {
 
 @media screen and (min-width: 992px) {
 
-    .nav-container {
-        padding-left: 15%;
-        padding-right: 15%;
+    .custom-padding-lg {
+        padding-left: $padding-desktop;
+        padding-right: $padding-desktop;
     }
 
     .hero-section {
         // Set global style for all hero images in tablet/desktop
+        position: relative; // to enable card to be positioned exactly halfway along height of hero section
         img {
             height: calc(100vh - $navbar-height);
             width: 100%;
@@ -341,32 +347,16 @@ body {
             @include card-base-style($card-border-radius: $hero-card-border-radius);
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-evenly;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            right: 15%;
-            width: 400px;
-            height: 400px;
+            right: $padding-desktop;
+            width: 450px;
+            aspect-ratio: 1/1;
         }
     }
-
-    .what-we-do {
-        padding-left: $padding-desktop;
-        padding-right: $padding-desktop;
-    }
-
-    .street-community {
-        padding-left: $padding-desktop;
-        padding-right: $padding-desktop;
-
-        text-align: center;
-    }
-
-    .assistance {
-        text-align: center;
-    }
-
+    
     .assistance-volunteer-tab {
         padding: 75px 75px 75px $padding-desktop;
     }
@@ -374,21 +364,7 @@ body {
     .assistance-donate-tab {
         border-top-left-radius: $hero-card-border-radius;
         border-bottom-left-radius: $hero-card-border-radius;
-
         padding: 75px $padding-desktop 75px 75px;
-    }
-
-    .words-from-volunteers {
-        padding-left: $padding-desktop;
-        padding-right: $padding-desktop;
-        h2 {
-            text-align: center;
-        }
-    }
-
-    .statistics {
-        padding-left: $padding-desktop;
-        padding-right: $padding-desktop;
     }
 
     .image-card-holder {

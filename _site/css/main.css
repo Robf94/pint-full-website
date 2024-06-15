@@ -22,7 +22,7 @@ body ul {
 
 .custom-btn {
   color: white;
-  background-color: #1D7061;
+  background-color: #E46C0A;
   border-radius: 16px;
   border: none;
   transition: 0.2s ease;
@@ -91,7 +91,23 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 
 .assistance-donate-tab {
   color: white;
-  background-color: #1D7061;
+  background-color: #E46C0A;
+}
+
+.orange-wave-container {
+  background-image: url("/assets/orange-vector.svg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.partner-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.partner-logo-container .partner-logo {
+  width: 100px;
 }
 
 .quote-card {
@@ -109,52 +125,48 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   border-radius: 25px;
   background-color: #f8f9fa;
   text-decoration: none;
-  background-color: #0a83e5;
   height: 175px;
   position: relative;
   margin-top: 25px;
 }
 .stat-card .circle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50px;
   height: 50px;
   padding: 10px;
-  background-color: #1D7061;
+  background-color: #E46C0A;
   border-radius: 50%;
   position: absolute;
   top: -25px;
 }
-.stat-card .circle-icon img {
-  height: 100%;
-  width: 100%;
-}
-
-.green-wave-container {
-  background-image: url("/assets/green-vector.svg");
-  background-size: cover;
-  background-position: bottom;
+.stat-card .circle-icon .stat-icon {
+  color: white;
 }
 
 .card-container {
   margin: 30px 0;
 }
-.card-container .card-col .card-volunteer {
+.card-container .card-volunteer {
   border-radius: 25px;
   background-color: #f8f9fa;
   text-decoration: none;
-  height: 100%;
   transition: 0.2s ease;
   box-shadow: 0px 10px 10px 0px rgba(197, 197, 197, 0.7019607843);
+  padding: 16px;
+  height: 100%;
 }
-.card-container .card-col .card-volunteer .card-img-fit {
+.card-container .card-volunteer .card-img-fit {
   aspect-ratio: 5/3;
   object-fit: cover;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
-.card-container .card-col .card-volunteer:hover {
+.card-container .card-volunteer:hover {
   transform: scale(1.01);
 }
-.card-container .card-col:nth-child(1) .card-img-fit, .card-container .card-col:nth-child(2) .card-img-fit, .card-container .card-col:nth-child(3) .card-img-fit, .card-container .card-col:nth-child(4) .card-img-fit, .card-container .card-col:nth-child(5) .card-img-fit, .card-container .card-col:nth-child(6) .card-img-fit, .card-container .card-col:nth-child(7) .card-img-fit {
+.card-container:nth-child(1) .card-img-fit, .card-container:nth-child(2) .card-img-fit, .card-container:nth-child(3) .card-img-fit, .card-container:nth-child(4) .card-img-fit, .card-container:nth-child(5) .card-img-fit, .card-container:nth-child(6) .card-img-fit, .card-container:nth-child(7) .card-img-fit {
   object-position: 100% 25%;
 }
 
@@ -208,9 +220,12 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   }
 }
 @media screen and (min-width: 992px) {
-  .nav-container {
+  .custom-padding-lg {
     padding-left: 15%;
     padding-right: 15%;
+  }
+  .hero-section {
+    position: relative;
   }
   .hero-section img {
     height: calc(100vh - 75px);
@@ -226,25 +241,13 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 15%;
-    width: 400px;
-    height: 400px;
-  }
-  .what-we-do {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-  .street-community {
-    padding-left: 15%;
-    padding-right: 15%;
-    text-align: center;
-  }
-  .assistance {
-    text-align: center;
+    width: 450px;
+    aspect-ratio: 1/1;
   }
   .assistance-volunteer-tab {
     padding: 75px 75px 75px 15%;
@@ -253,17 +256,6 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     padding: 75px 15% 75px 75px;
-  }
-  .words-from-volunteers {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-  .words-from-volunteers h2 {
-    text-align: center;
-  }
-  .statistics {
-    padding-left: 15%;
-    padding-right: 15%;
   }
   .image-card-holder {
     height: 60%;

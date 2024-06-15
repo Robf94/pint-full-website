@@ -37,7 +37,7 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid nav-container d-flex justify-content-between">
+    <div class="container-fluid nav-container custom-padding-lg">
       <a class="navbar-brand" href="/index">
         <img src="/assets/B870F3D1-79B0-4696-BF7E-410C1FB6B03D.png" alt="PINT Logo" id="nav-logo">
       </a>
@@ -64,21 +64,22 @@
   
   <div class="hero-section container-fluid p-0">
     <img src="/assets/IMG-20240121-WA0027.jpg" alt="Volunteers holding their hands up wearing branded high-visibility vests" class="img-fluid" id="volunteer-hero-img">
-    <div class="container-fluid p-3 p-md-4 hero-text-container md-hero-card">
+    <div class="container-fluid py-3 p-lg-5 hero-text-container md-hero-card">
       <h2>Volunteer With Us</h2>
-      <div class="volunteer-info">
-        <p>We are always looking out for volunteers, whether that be helping out on the streets or assisting with phone calls, emails, socials, or the tech side of things. Please don't hesitate to reach out to us by clicking the button below!</p>
-        <a href="" class="btn custom-btn w-100">Volunteer</a>
-      </div>
+      <p>We are always looking out for volunteers, whether that be helping out on the streets or assisting with phone calls, emails, socials, or the tech side of things. Please don't hesitate to reach out to us by clicking the button below!</p>
+      <a href="" class="btn custom-btn w-100">Volunteer</a>
     </div>
   </div>
 
-<div class="container-fluid card-container">
-  <h2>Meet the volunteers</h2>
+<div class="container-fluid card-container custom-padding-lg">
 
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-12 row-cols-xl-4 g-4 p-0">
+  <div class="row">
+    <h2>Meet the volunteers</h2>
+  </div>
 
-    <div class="col card-col">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <!-- g-4 causes invisible overflow issue - fix if required -->
+    <div class="col">
       <a class="card card-volunteer" href="/cee">
         <img src="/assets/volunteers/portrait-placeholder.png" class="card-img-top card-img-fit" alt="...">
         <div class="card-body">
@@ -89,7 +90,7 @@
       </a>
     </div>
 
-    <div class="col card-col">
+    <div class="col">
       <a class="card card-volunteer" href="#">
         <img src="/assets/volunteers/portrait-placeholder.png" class="card-img-top card-img-fit" alt="...">
         <div class="card-body">
@@ -100,7 +101,7 @@
       </a>
     </div>
 
-    <div class="col card-col">
+    <div class="col">
       <a class="card card-volunteer" href="/daiod">
         <img src="/assets/volunteers/daiod.jpg" class="card-img-top card-img-fit" alt="...">
         <div class="card-body">
@@ -111,7 +112,7 @@
       </a>
     </div>
 
-    <div class="col card-col">
+    <div class="col">
       <a class="card card-volunteer" href="#">
         <img src="/assets/volunteers/portrait-placeholder.png" class="card-img-top card-img-fit" alt="...">
         <div class="card-body">
@@ -122,7 +123,7 @@
       </a>
     </div>
 
-    <div class="col card-col">
+    <div class="col">
       <a class="card card-volunteer" href="#">
         <img src="/assets/volunteers/derek.jpg" class="card-img-top card-img-fit" alt="...">
         <div class="card-body">
@@ -133,7 +134,7 @@
       </a>
     </div>
     
-    <div class="col card-col">
+    <div class="col">
       <a class="card card-volunteer" href="#">
         <img src="/assets/volunteers/marya.jpg" class="card-img-top card-img-fit" alt="...">
         <div class="card-body">
@@ -144,7 +145,7 @@
       </a>
     </div>
 
-    <div class="col card-col">
+    <div class="col">
       <a class="card card-volunteer" href="#">
         <img src="/assets/volunteers/daisy.jpg" class="card-img-top card-img-fit" alt="...">
         <div class="card-body">
@@ -155,13 +156,13 @@
       </a>
     </div>
 
-    <div class="col card-col">
+    <div class="col">
       <a class="card card-volunteer" href="#">
         <img src="/assets/volunteers/oluwaseyi.png" class="card-img-top card-img-fit" alt="...">
         <div class="card-body">
           <h5 class="card-title">Oluwaseyi</h5>
-          <h6 class="card-subtitle mb-2 text-body-secondary">Graphic Designer</h6>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam blanditiis, ad ratione necessitatibus ipsam sapiente suscipit velit officia aliquid nesciunt enim voluptas, accusamus magni mollitia! Temporibus repellat laborum ullam voluptatibus.</p>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Graphic/Product Designer</h6>
+          <p class="card-text">Design isn't just something I love; it's a tool that allows me to infuse empathy and creativity into projects that truly matter. Volunteering is my way of using my skills to contribute to initiatives that matter and touch the lives of individuals, groups, and communities that could really use a helping hand.</p>
         </div>
       </a>
     </div>
@@ -169,7 +170,7 @@
   </div>
   
 </div>
-  <div class="container-fluid footer-container">
+  <footer class="container-fluid footer-container custom-padding-lg">
     <div class="row">
       <div class="col-md-3 footer-brand">
         <img class="img footer-logo-img" src="/assets/pint-white.png" alt="PINT Logo">
@@ -202,6 +203,6 @@
         <i class="fa-brands fa-instagram fa-fw"></i><a href="https://www.instagram.com/pintgiving/"></a>
       </div>
     </div>
-  </div>
+  </footer>
 </body>
 </html>
