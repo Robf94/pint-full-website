@@ -1,5 +1,4 @@
 body {
-  font-family: "Yeseva One", sans-serif;
   min-height: 100dvh;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -67,8 +66,11 @@ body ul {
 body {
   font-family: "Josefin Sans", sans-serif;
 }
-body h1, body h2, body h3, body h4, body h5, body h6 {
+body h1, body h2, body h3, body h4, body h5, body h5 {
   font-family: "Yeseva One", sans-serif;
+}
+body h6 {
+  font-weight: bold;
 }
 
 .hero-section {
@@ -185,6 +187,14 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 
 .form-wrapper .message-input-box {
   height: 150px;
+}
+
+.privacy-subheadings {
+  color: #E46C0A;
+}
+
+.privacy-list {
+  list-style: disc;
 }
 
 /* Footer */
