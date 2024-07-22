@@ -297,17 +297,17 @@ body {
 
 /* Footer */
 .footer-container {
-    height: 600px; // change?
+    // min-height: 50vh; // change?
     color: white;
     background-color: $footer-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: static;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // text-align: center;
+    // position: static;
     .footer-logo-img {
         width: 100px;
-        margin-bottom: 0.5rem;
+        // margin-bottom: 0.5rem;
     }
     .footer-list {
         padding: 0;

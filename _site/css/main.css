@@ -199,18 +199,11 @@ body h6 {
 
 /* Footer */
 .footer-container {
-  height: 600px;
   color: white;
   background-color: #3A3A3A;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: static;
 }
 .footer-container .footer-logo-img {
   width: 100px;
-  margin-bottom: 0.5rem;
 }
 .footer-container .footer-list {
   padding: 0;
