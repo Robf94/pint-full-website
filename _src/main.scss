@@ -27,7 +27,7 @@ $volunteer-card-height: 100%;
 $navbar-height: 75px;
 $header-footer-color: #f8f9fa;
 
-$padding-desktop: 15%;
+$padding-desktop: 12%;
 
 $transition: 0.2s ease;
 
@@ -246,8 +246,8 @@ body {
             // height: 50%;
             aspect-ratio: 5/3;
             object-fit: cover;
-            border-top-left-radius: $volunteer-card-border-radius;
-            border-top-right-radius: $volunteer-card-border-radius;
+            border-top-left-radius: $volunteer-card-border-radius - 9px;
+            border-top-right-radius: $volunteer-card-border-radius - 9px;
         }
         &:hover {
             transform: $transform-hover;
