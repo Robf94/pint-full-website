@@ -1,15 +1,15 @@
 // VARIABLES
 
-$primary-color: #E46C0A;
+$primary-color: #e46c0a;
 $primary-color-2: #e9b184;
 $primary-lighter: #fedec3;
 
 $secondary-color: #0a83e5;
 $secondary-darker: #044f8c;
 
-$tertiary-color: #7A518E;
+$tertiary-color: #7a518e;
 
-$footer-color: #3A3A3A;
+$footer-color: #3a3a3a;
 
 $card-background-color: #f8f9fa;
 
@@ -36,133 +36,137 @@ $transform-active: scale(0.99);
 
 $shadow-cards: 0px 10px 10px 0px #c5c5c5b3;
 
-$heading-font: "Yeseva One", sans-serif; 
+$heading-font: "Yeseva One", sans-serif;
 $body-font: "Josefin Sans", sans-serif;
 
 // END VARIABLES
 
-
 // RESETS
 
 body {
-    // Enable footer to stay at bottom of viewport on short pages
-    // Apparently only works properly when header is not fixed to top of viewport
-    min-height: 100dvh;
-    display: grid;
-    grid-template-rows: auto 1fr auto; // Sets heights to header: auto; body: 1fr; footer: auto so that header and footer take up as much space depending on how much content is inside of them. Body expands if there is available space after adding necessary content
-    grid-template-columns: minmax(0, 1fr); // Prevents page scrolling horizontally if there is content inside that is wider than the screen
-    // Anchor link style reset from Bootstrap default
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-    // List style reset
-    ul {
-        list-style: none;
-    }
+  // Enable footer to stay at bottom of viewport on short pages
+  // Apparently only works properly when header is not fixed to top of viewport
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto; // Sets heights to header: auto; body: 1fr; footer: auto so that header and footer take up as much space depending on how much content is inside of them. Body expands if there is available space after adding necessary content
+  grid-template-columns: minmax(
+    0,
+    1fr
+  ); // Prevents page scrolling horizontally if there is content inside that is wider than the screen
+  // Anchor link style reset from Bootstrap default
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  // List style reset
+  ul {
+    list-style: none;
+  }
 }
 
 // END RESETS
-
 
 // MIXINS
 
 // Card base styling
 @mixin card-base-style($card-border-radius) {
-    border-radius: $card-border-radius;
-    background-color: $card-background-color;
-    text-decoration: none;
+  border-radius: $card-border-radius;
+  background-color: $card-background-color;
+  text-decoration: none;
 }
 
 // Image holder
 @mixin image-card($height: 100%, $width: 100%, $position: inherit) {
-    height: $height;
-    width: $width;
-    position: $position;
-    img {
-        height: 100%;
-        object-fit: cover;
-        border-radius: $volunteer-card-border-radius;
-    }
+  height: $height;
+  width: $width;
+  position: $position;
+  img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: $volunteer-card-border-radius;
+  }
 }
 
 // END MIXINS
-
 
 // GLOBAL ELEMENTS
 
 // Navbar
 .navbar {
-    z-index: 100;
-    #nav-logo {
-        height: 49px;
-        // Sets total height of navbar to 75px - issues with setting min-height directly on navbar as this makes brand and icon shift up slightly when expanding
-    }
+  z-index: 100;
+  #nav-logo {
+    height: 49px;
+    // Sets total height of navbar to 75px - issues with setting min-height directly on navbar as this makes brand and icon shift up slightly when expanding
+  }
 }
 
 // Button Design
 @mixin custom-btn($color, $background-color, $hover-color, $hover-bg-color) {
-    color: $color;
-    background-color: $background-color;
-    border-radius: $btn-border-radius;
-    border: none;
-    transition: $transition;
-    padding: 10px;
-    &:hover {
-        color: $hover-color;
-        background-color: $hover-bg-color;
-        transform: $transform-hover;
-    }
-    &:active {
-        color: $hover-color !important;
-        background-color: $hover-bg-color !important;
-        transform: $transform-active;
-    }
+  color: $color;
+  background-color: $background-color;
+  border-radius: $btn-border-radius;
+  border: none;
+  transition: $transition;
+  padding: 10px;
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+    transform: $transform-hover;
+  }
+  &:active {
+    color: $hover-color !important;
+    background-color: $hover-bg-color !important;
+    transform: $transform-active;
+  }
 }
 
 // Button includes
 .custom-btn {
-    @include custom-btn(white, $primary-color, white, #1e1e1e);
-    // Consider changing hover-bg-color
+  @include custom-btn(white, $primary-color, white, #1e1e1e);
+  // Consider changing hover-bg-color
 }
 
 // Button in homepage donate section
 #donate-section-btn {
-    @include custom-btn(black, white, black, white);
+  @include custom-btn(black, white, black, white);
 }
 
 // Swiper
 
 .swiper-img {
-    border-radius: $hero-card-border-radius;
-    object-fit: cover;
-    aspect-ratio: 1/1;
+  border-radius: $hero-card-border-radius;
+  object-fit: cover;
+  aspect-ratio: 1/1;
 }
 
-  
 // END GLOBAL ELEMENTS
 
 // UNIVERSAL BEHAVIOUR
 
 // Fonts
 body {
-    font-family: $body-font;
-    h1, h2, h3, h4, h5, h5 {
-        font-family: $heading-font;
-    }
-    h6 {
-        // body-font
-        font-weight: bold;
-    }
+  font-family: $body-font;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h5 {
+    font-family: $heading-font;
+  }
+  h6 {
+    // body-font
+    font-weight: bold;
+  }
 }
 
 // Hero - mobile
 .hero-section {
-    min-height: calc(50vh - $navbar-height / 2);
-    // Style so that image takes up empty space if content below is short
-    .hero-text-container {
-        background-color: $card-background-color;
-    }
+  min-height: calc(50vh - $navbar-height / 2);
+  // Style so that image takes up empty space if content below is short
+  .hero-text-container {
+    background-color: $card-background-color;
+  }
 }
 
 // END UNIVERSAL BEHAVIOUR
@@ -172,60 +176,60 @@ body {
 // HOMEPAGE
 
 .image-card-holder {
-    @include image-card();
+  @include image-card();
 }
 
 .assistance-donate-tab {
-    color: white;
-    background-color: $primary-color;
+  color: white;
+  background-color: $primary-color;
 }
 
 .orange-wave-container {
-    background-image: url('/assets/orange-vector.svg');
-    background-size: cover;
-    background-position: bottom;
+  background-image: url("/assets/orange-vector.svg");
+  background-size: cover;
+  background-position: bottom;
 }
 
 .partner-logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    .partner-logo {
-        width: 100px;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  .partner-logo {
+    width: 100px;
+  }
 }
 
 .quote-card {
-    @include card-base-style($volunteer-card-border-radius);
-    background-image: url('/assets/quote-marks.jpg');
-    background-size: cover;
-    background-position: right bottom;
-    position: relative;
-    overflow: hidden;
+  @include card-base-style($volunteer-card-border-radius);
+  background-image: url("/assets/quote-marks.jpg");
+  background-size: cover;
+  background-position: right bottom;
+  position: relative;
+  overflow: hidden;
 }
 
 .stat-card {
-    @include card-base-style($volunteer-card-border-radius);
-    height: 175px;
-    // width: 230px;
-    position: relative;
-    margin-top: 25px; // Take into account the positioning of the orange icon
-    .circle-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-        background-color: $primary-color;
-        border-radius: 50%;
-        position: absolute;
-        top: -25px;
-        .stat-icon {
-            color: white;
-        };
+  @include card-base-style($volunteer-card-border-radius);
+  height: 175px;
+  // width: 230px;
+  position: relative;
+  margin-top: 25px; // Take into account the positioning of the orange icon
+  .circle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    .stat-icon {
+      color: white;
     }
+  }
 }
 
 // VOLUNTEER PAGE
@@ -233,169 +237,175 @@ body {
 // Rearrange card styling to mixin but make sure everything still works properly
 
 .card-container {
-    margin: $section-separator;
+  margin: $section-separator;
 
-    .card-volunteer {
-        @include card-base-style($card-border-radius: $volunteer-card-border-radius);
-        transition: $transition;
-        box-shadow: $shadow-cards;
-        padding: 16px;
-        height: 100%;
-        .card-img-fit {
-            // alter positions for nth images
-            // height: 50%;
-            aspect-ratio: 5/3;
-            object-fit: cover;
-            border-top-left-radius: $volunteer-card-border-radius - 9px;
-            border-top-right-radius: $volunteer-card-border-radius - 9px;
-        }
-        &:hover {
-            transform: $transform-hover;
-        }
+  .card-volunteer {
+    @include card-base-style(
+      $card-border-radius: $volunteer-card-border-radius
+    );
+    transition: $transition;
+    box-shadow: $shadow-cards;
+    padding: 16px;
+    height: 100%;
+    .card-img-fit {
+      // alter positions for nth images
+      // height: 50%;
+      aspect-ratio: 5/3;
+      object-fit: cover;
+      border-top-left-radius: $volunteer-card-border-radius - 9px;
+      border-top-right-radius: $volunteer-card-border-radius - 9px;
     }
-    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
-        .card-img-fit {
-            object-position: 100% 25%;
-        }
+    &:hover {
+      transform: $transform-hover;
     }
+  }
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5),
+  &:nth-child(6),
+  &:nth-child(7) {
+    .card-img-fit {
+      object-position: 100% 25%;
+    }
+  }
 }
 
 // Bio Page
 
 .volunteer-bio-main {
-    margin: $section-separator;
-    .bio-portrait {
-        width: 100%;
-        aspect-ratio: 1; // Squares image
-        object-fit: cover;
+  margin: $section-separator;
+  .bio-portrait {
+    width: 100%;
+    aspect-ratio: 1; // Squares image
+    object-fit: cover;
     // set ID to each image as each will be different
-    }
+  }
 }
 
 // Set object-position for each portrait where required
 
 #bio-portrait-daiod {
-    object-position: 0% 25%;
+  object-position: 0% 25%;
 }
 
 // Volunteer Form Page
 
 .form-wrapper {
-    .message-input-box {
-        height: 150px;
-    }
+  .message-input-box {
+    height: 150px;
+  }
 }
 
 // Privacy Policy page
 .privacy-subheadings {
-    color: $primary-color;
+  color: $primary-color;
 }
 
 .privacy-list {
-    list-style: disc ;
+  list-style: disc;
 }
 
 /* Footer */
 .footer-container {
-    // min-height: 50vh; // change?
-    color: white;
-    background-color: $footer-color;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // text-align: center;
-    // position: static;
-    .footer-logo-img {
-        width: 100px;
-        // margin-bottom: 0.5rem;
-    }
-    .footer-list {
-        padding: 0;
-    }
+  // min-height: 50vh; // change?
+  color: white;
+  background-color: $footer-color;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // text-align: center;
+  // position: static;
+  .footer-logo-img {
+    width: 100px;
+    // margin-bottom: 0.5rem;
+  }
+  .footer-list {
+    padding: 0;
+  }
 }
 
 // END SASS
 
-
 // MEDIA QUERIES
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-    .assistance-donate-tab {
-        padding: 1rem;
-        border-top-left-radius: $hero-card-border-radius;
-        border-bottom-left-radius: $hero-card-border-radius;
-    }
+  .assistance-donate-tab {
+    padding: 1rem;
+    border-top-left-radius: $hero-card-border-radius;
+    border-bottom-left-radius: $hero-card-border-radius;
+  }
 }
 
 @media screen and (max-width: 991px) {
-    // Sets padding for green background donate section on homepage
-    .assistance-donate-tab {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
+  // Sets padding for green background donate section on homepage
+  .assistance-donate-tab {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
+  .custom-padding-lg {
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+  }
 
-    .custom-padding-lg {
-        padding-left: $padding-desktop;
-        padding-right: $padding-desktop;
+  .hero-section {
+    // Set global style for all hero images in tablet/desktop
+    position: relative; // to enable card to be positioned exactly halfway along height of hero section
+    img {
+      height: calc(100vh - $navbar-height);
+      width: 100%;
+      object-fit: cover;
     }
+    // Set image-specific positioning
+    #homepage-hero-img {
+      object-position: 50% 0%;
+    }
+    // Position card in tablet/desktop
+    .md-hero-card {
+      @include card-base-style($card-border-radius: $hero-card-border-radius);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: $padding-desktop;
+      width: 450px;
+      aspect-ratio: 1/1;
+    }
+  }
 
-    .hero-section {
-        // Set global style for all hero images in tablet/desktop
-        position: relative; // to enable card to be positioned exactly halfway along height of hero section
-        img {
-            height: calc(100vh - $navbar-height);
-            width: 100%;
-            object-fit: cover;
-        }
-        // Set image-specific positioning
-        #homepage-hero-img {
-            object-position: 50% 0%;
-        }
-        // Position card in tablet/desktop
-        .md-hero-card {
-            @include card-base-style($card-border-radius: $hero-card-border-radius);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: $padding-desktop;
-            width: 450px;
-            aspect-ratio: 1/1;
-        }
-    }
-    
-    .assistance-volunteer-tab {
-        padding: 75px 75px 75px $padding-desktop;
-    }
+  .assistance-volunteer-tab {
+    padding: 75px 75px 75px $padding-desktop;
+  }
 
-    .assistance-donate-tab {
-        border-top-left-radius: $hero-card-border-radius;
-        border-bottom-left-radius: $hero-card-border-radius;
-        padding: 75px $padding-desktop 75px 75px;
-    }
+  .assistance-donate-tab {
+    border-top-left-radius: $hero-card-border-radius;
+    border-bottom-left-radius: $hero-card-border-radius;
+    padding: 75px $padding-desktop 75px 75px;
+  }
 
-    .image-card-holder {
-        @include image-card(60%, 50%, relative);
-        aspect-ratio: 1/1;
-        &:nth-child(1) {
-            margin-bottom: -5%;
-            img {
-                object-position: 40% 0%;
-            }
-        }
-        &:nth-child(2) {
-            margin-top: -5%;
-            margin-left: 20%;
-            img {
-                object-position: 10% 0%;
-            }
-        }
+  .image-card-holder {
+    @include image-card(60%, 50%, relative);
+    aspect-ratio: 1/1;
+    &:nth-child(1) {
+      margin-bottom: -5%;
+      img {
+        object-position: 40% 0%;
+      }
     }
+    &:nth-child(2) {
+      margin-top: -5%;
+      margin-left: 20%;
+      img {
+        object-position: 10% 0%;
+      }
+    }
+  }
 }
 
 // END MEDIA QUERIES

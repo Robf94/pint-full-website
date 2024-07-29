@@ -21,7 +21,7 @@ body ul {
 
 .custom-btn {
   color: white;
-  background-color: #E46C0A;
+  background-color: #e46c0a;
   border-radius: 16px;
   border: none;
   transition: 0.2s ease;
@@ -66,7 +66,12 @@ body ul {
 body {
   font-family: "Josefin Sans", sans-serif;
 }
-body h1, body h2, body h3, body h4, body h5, body h5 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h5 {
   font-family: "Yeseva One", sans-serif;
 }
 body h6 {
@@ -93,7 +98,7 @@ body h6 {
 
 .assistance-donate-tab {
   color: white;
-  background-color: #E46C0A;
+  background-color: #e46c0a;
 }
 
 .orange-wave-container {
@@ -138,7 +143,7 @@ body h6 {
   width: 50px;
   height: 50px;
   padding: 10px;
-  background-color: #E46C0A;
+  background-color: #e46c0a;
   border-radius: 50%;
   position: absolute;
   top: -25px;
@@ -190,7 +195,7 @@ body h6 {
 }
 
 .privacy-subheadings {
-  color: #E46C0A;
+  color: #e46c0a;
 }
 
 .privacy-list {
@@ -200,7 +205,7 @@ body h6 {
 /* Footer */
 .footer-container {
   color: white;
-  background-color: #3A3A3A;
+  background-color: #3a3a3a;
 }
 .footer-container .footer-logo-img {
   width: 100px;
