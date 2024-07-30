@@ -38,7 +38,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid nav-container custom-padding-lg">
-      <a class="navbar-brand" href="/index">
+      <a class="navbar-brand" href="/">
         <img src="/assets/B870F3D1-79B0-4696-BF7E-410C1FB6B03D.png" alt="PINT Logo" id="nav-logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,15 +48,14 @@
         <ul class="navbar-nav align-items-center">
           <li class="nav-item px-4">
             
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="/construction">About</a>
           </li>
           <li class="nav-item px-4">
             
             <a class="nav-link" href="#">Our Work</a>
           </li>
           <li class="nav-item px-4">
-            
-            <a class="nav-link" href="#">Volunteer</a>
+            <a class="nav-link" href="/volunteer/">Volunteer</a>
           </li>
           <li class="nav-item ps-4 pe-4 pe-lg-0">
             <a class="nav-link btn custom-btn" data-jg-donate-button data-linkId="4urj0rxklq" data-marketCode="GB" data-linkType="givingCheckout">Donate</a>
@@ -74,13 +73,15 @@
     </div>
   </div>
 
-  <div class="container-fluid card-container custom-padding-lg">
+  <div class="container-fluid card-container custom-padding-lg my-5">
 
     <div class="row">
-      <h2>Meet the volunteers</h2>
+      <div class="col">
+        <h2 class="text-center">Meet the volunteers</h2>
+      </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 fit-for-nth-child">
       <!-- g-4 causes invisible overflow issue - fix if required -->
       <div class="col">
         <div class="card card-volunteer">
@@ -88,18 +89,19 @@
           <div class="card-body">
             <h5 class="card-title">Cee</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Founder and Trustee</h6>
-            <p class="card-text">Cee is a visionary who works alongside our volunteers daily.</p>
+            <p class="card-text volunteer-card-text">Cee works alongside our volunteers daily, giving essentials and food packs to the homeless, creating relationships that have to be seen to be understood.</p>
           </div>
         </div>
       </div>
 
       <div class="col">
         <div class="card card-volunteer">
-          <img src="/assets/volunteers/portrait-placeholder.png" class="card-img-top card-img-fit" alt="...">
+          <img src="/assets/volunteers/toni.jpg" class="card-img-top card-img-fit" alt="...">
           <div class="card-body">
             <h5 class="card-title">Toni</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Trustee and Outreach Volunteer</h6>
-            <p class="card-text">Toni joined as a trustee and outreach volunteer during the height of the pandemic. Toni aspires to help many homeless people and their pets, providing much-needed help during outreach campaigns.</p>
+            <p class="card-text volunteer-card-text">From Hull, East Yorkshire. I found PINT on social media when I was living in London.
+            I offered to volunteer as I had lots of spare time during the pandemic. I fell in love with the charity and enjoyed going on weekly outreach and meeting new friends. Back up North I still volunteer for PINT and we hope to set a team up here shortly.</p>
           </div>
         </div>
       </div>
@@ -110,18 +112,18 @@
           <div class="card-body">
             <h5 class="card-title">Daiod</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Trustee and Outreach Volunteer</h6>
-            <p class="card-text">Daiod has experienced homelessness first-hand and has previously been supported by PINT. Today, he is an avid volunteer and a well-known figure in the boxing world.</p>
+            <p class="card-text volunteer-card-text">Daiod has experienced homelessness first-hand and has previously been supported by PINT. Today, he is an avid volunteer and a well-known figure in the boxing world.</p>
           </div>
         </div>
       </div>
 
       <div class="col">
         <div class="card card-volunteer">
-          <img src="/assets/volunteers/portrait-placeholder.png" class="card-img-top card-img-fit" alt="...">
+          <img src="/assets/volunteers/charlotte.png" class="card-img-top card-img-fit" alt="...">
           <div class="card-body">
             <h5 class="card-title">Charlotte</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Trustee and Ambassador</h6>
-            <p class="card-text">Charlotte is also keen to provide support for the homeless and their pets on the streets.</p>
+            <p class="card-text volunteer-card-text">A bubbly and vibrant individual working relentlessly on her career as a DJ and artist, who always finds time for those in need. Like Toni, Charlotte is a huge animal lover, whose concern ensures that our four legged friends on the streets gain the love they need as well as their owners.</p>
           </div>
         </div>
       </div>
@@ -132,7 +134,7 @@
           <div class="card-body">
             <h5 class="card-title">Derek</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Outreach Supervisor</h6>
-            <p class="card-text">Derek believes everyone deserves dignity and respect. At PINT, we provide more than just food - we are good listeners and want to engage, and give people space to talk.</p>
+            <p class="card-text volunteer-card-text">Derek believes everyone deserves dignity and respect. At PINT, we provide more than just food - we are good listeners and want to engage, and give people space to talk.</p>
           </div>
         </div>
       </div>
@@ -143,7 +145,7 @@
           <div class="card-body">
             <h5 class="card-title">Marya</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Administrator</h6>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aut porro incidunt, voluptatibus assumenda, sequi eum deserunt, quo officiis aspernatur eos molestiae tenetur odio debitis hic fugiat. Dignissimos, magnam vitae?</p>
+            <p class="card-text volunteer-card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aut porro incidunt, voluptatibus assumenda, sequi eum deserunt, quo officiis aspernatur eos molestiae tenetur odio debitis hic fugiat. Dignissimos, magnam vitae?</p>
           </div>
         </div>
       </div>
@@ -154,7 +156,7 @@
           <div class="card-body">
             <h5 class="card-title">Daisy</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Marketing</h6>
-            <p class="card-text">Daisy is part of the marketing team at PINT. She is passionate about the fight to end homelessness and enjoys bringing a positive impact to the lives of the people she helps.</p>
+            <p class="card-text volunteer-card-text">Daisy is part of the marketing team at PINT. She is passionate about the fight to end homelessness and enjoys bringing a positive impact to the lives of the people she helps.</p>
           </div>
         </div>
       </div>
@@ -165,7 +167,29 @@
           <div class="card-body">
             <h5 class="card-title">Oluwaseyi</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Graphic/Product Designer</h6>
-            <p class="card-text">Design isn't just something I love; it's a tool that allows me to infuse empathy and creativity into projects that truly matter. Volunteering is my way of using my skills to contribute to initiatives that matter and touch the lives of individuals, groups, and communities that could really use a helping hand.</p>
+            <p class="card-text volunteer-card-text">Design isn't just something I love; it's a tool that allows me to infuse empathy and creativity into projects that truly matter. Volunteering is my way of using my skills to contribute to initiatives that matter and touch the lives of individuals, groups, and communities that could really use a helping hand.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-volunteer">
+          <img src="/assets/volunteers/ruvini.png" class="card-img-top card-img-fit" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Ruvini</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Graphic/Product Designer</h6>
+            <p class="card-text volunteer-card-text">Design isn't just something I love; it's a tool that allows me to infuse empathy and creativity into projects that truly matter. Volunteering is my way of using my skills to contribute to initiatives that matter and touch the lives of individuals, groups, and communities that could really use a helping hand.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-volunteer">
+          <img src="/assets/volunteers/nelhia.jpg" class="card-img-top card-img-fit" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Nelhia</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Graphic/Product Designer</h6>
+            <p class="card-text volunteer-card-text">Design isn't just something I love; it's a tool that allows me to infuse empathy and creativity into projects that truly matter. Volunteering is my way of using my skills to contribute to initiatives that matter and touch the lives of individuals, groups, and communities that could really use a helping hand.</p>
           </div>
         </div>
       </div>
@@ -176,10 +200,36 @@
           <div class="card-body">
             <h5 class="card-title">Rob</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Web Developer</h6>
-            <p class="card-text">Design isn't just something I love; it's a tool that allows me to infuse empathy and creativity into projects that truly matter. Volunteering is my way of using my skills to contribute to initiatives that matter and touch the lives of individuals, groups, and communities that could really use a helping hand.</p>
+            <p class="card-text volunteer-card-text">Design isn't just something I love; it's a tool that allows me to infuse empathy and creativity into projects that truly matter. Volunteering is my way of using my skills to contribute to initiatives that matter and touch the lives of individuals, groups, and communities that could really use a helping hand.</p>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="container-fluid custom-padding-lg">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-center">Special thanks to:</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-md-center">
+        <p>Marya, Yashar, Dionne, Richard, Donna, Nayna, Gary, Tush, Chris, and all the other volunteers who make it happen.</p>
+        <p>Whether through outreach, a one-off visit, or a regular spot at our soup kitchen, each one plays a vital role in our little army, tackling homelessness one day at a time.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mb-5 custom-padding-lg calendar-bg-container">
+    <div class="cal-bg">
+      <a href="/construction">
+        <div class="d-flex flex-column align-items-center text-center justify-content-center h-100">
+          <img src="/assets/calendar-icon.png" width="50" alt="..." class="mb-2">
+          <h2>Outreach Calendar</h2>
+          <p>Find out for whom, what, and when we do what we do</p>
+        </div>
+      </a>
     </div>
   </div>
   <footer class="container-fluid footer-container custom-padding-lg">

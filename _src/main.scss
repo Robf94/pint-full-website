@@ -15,11 +15,11 @@ $card-background-color: #f8f9fa;
 
 $btn-border-radius: 16px;
 $hero-card-border-radius: 50px;
-$volunteer-card-border-radius: 25px;
+$volunteer-card-border-radius: 50px;
 
 $default-padding: 20px;
 
-$section-separator: 30px 0;
+// $section-separator: 30px 0;
 
 $section-margin: 20px;
 $footer-padding: 20px;
@@ -237,7 +237,7 @@ body {
 // Rearrange card styling to mixin but make sure everything still works properly
 
 .card-container {
-  margin: $section-separator;
+  // margin: $section-separator;
 
   .card-volunteer {
     @include card-base-style(
@@ -245,37 +245,69 @@ body {
     );
     transition: $transition;
     box-shadow: $shadow-cards;
-    padding: 16px;
+    padding: 30px;
     height: 100%;
+    height: 550px;
+    .card-body {
+      padding: 30px 0 0 0;
+      .volunteer-card-text {
+        font-size: 13px;
+      }
+    }
     .card-img-fit {
       // alter positions for nth images
-      // height: 50%;
+      height: 50%;
       aspect-ratio: 5/3;
       object-fit: cover;
-      border-top-left-radius: $volunteer-card-border-radius - 9px;
-      border-top-right-radius: $volunteer-card-border-radius - 9px;
+      border-top-left-radius: $volunteer-card-border-radius - 20px;
+      border-top-right-radius: $volunteer-card-border-radius - 20px;
     }
     &:hover {
       transform: $transform-hover;
     }
   }
-  &:nth-child(1),
-  &:nth-child(2),
-  &:nth-child(3),
-  &:nth-child(4),
-  &:nth-child(5),
-  &:nth-child(6),
-  &:nth-child(7) {
-    .card-img-fit {
-      object-position: 100% 25%;
+  .fit-for-nth-child .col {
+    &:nth-child(1),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(11) {
+      .card-img-fit {
+        object-position: 100% 25%;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(9) {
+      .card-img-fit {
+        object-position: 100% 35%;
+      }
+    }
+
+    &:nth-child(6) {
+      .card-img-fit {
+        object-position: 0% 0%;
+      }
+    }
+
+    &:nth-child(7) {
+      .card-img-fit {
+        object-position: 100% 20%;
+      }
     }
   }
+}
+
+.cal-bg {
+  background-image: url("/assets/volunteer-calendar-bg.png");
+  background-color: #B65303;
+  color: white;
+  height: 355px;
 }
 
 // Bio Page
 
 .volunteer-bio-main {
-  margin: $section-separator;
+  // margin: $section-separator;
   .bio-portrait {
     width: 100%;
     aspect-ratio: 1; // Squares image

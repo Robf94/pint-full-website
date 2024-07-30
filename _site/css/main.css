@@ -93,7 +93,7 @@ body h6 {
 .image-card-holder img {
   height: 100%;
   object-fit: cover;
-  border-radius: 25px;
+  border-radius: 50px;
 }
 
 .assistance-donate-tab {
@@ -118,7 +118,7 @@ body h6 {
 }
 
 .quote-card {
-  border-radius: 25px;
+  border-radius: 50px;
   background-color: #f8f9fa;
   text-decoration: none;
   background-image: url("/assets/quote-marks.jpg");
@@ -129,7 +129,7 @@ body h6 {
 }
 
 .stat-card {
-  border-radius: 25px;
+  border-radius: 50px;
   background-color: #f8f9fa;
   text-decoration: none;
   height: 175px;
@@ -152,34 +152,52 @@ body h6 {
   color: white;
 }
 
-.card-container {
-  margin: 30px 0;
-}
 .card-container .card-volunteer {
-  border-radius: 25px;
+  border-radius: 50px;
   background-color: #f8f9fa;
   text-decoration: none;
   transition: 0.2s ease;
   box-shadow: 0px 10px 10px 0px rgba(197, 197, 197, 0.7019607843);
-  padding: 16px;
+  padding: 30px;
   height: 100%;
+  height: 550px;
+}
+.card-container .card-volunteer .card-body {
+  padding: 30px 0 0 0;
+}
+.card-container .card-volunteer .card-body .volunteer-card-text {
+  font-size: 13px;
 }
 .card-container .card-volunteer .card-img-fit {
+  height: 50%;
   aspect-ratio: 5/3;
   object-fit: cover;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 .card-container .card-volunteer:hover {
   transform: scale(1.01);
 }
-.card-container:nth-child(1) .card-img-fit, .card-container:nth-child(2) .card-img-fit, .card-container:nth-child(3) .card-img-fit, .card-container:nth-child(4) .card-img-fit, .card-container:nth-child(5) .card-img-fit, .card-container:nth-child(6) .card-img-fit, .card-container:nth-child(7) .card-img-fit {
+.card-container .fit-for-nth-child .col:nth-child(1) .card-img-fit, .card-container .fit-for-nth-child .col:nth-child(3) .card-img-fit, .card-container .fit-for-nth-child .col:nth-child(4) .card-img-fit, .card-container .fit-for-nth-child .col:nth-child(11) .card-img-fit {
   object-position: 100% 25%;
 }
-
-.volunteer-bio-main {
-  margin: 30px 0;
+.card-container .fit-for-nth-child .col:nth-child(2) .card-img-fit, .card-container .fit-for-nth-child .col:nth-child(9) .card-img-fit {
+  object-position: 100% 35%;
 }
+.card-container .fit-for-nth-child .col:nth-child(6) .card-img-fit {
+  object-position: 0% 0%;
+}
+.card-container .fit-for-nth-child .col:nth-child(7) .card-img-fit {
+  object-position: 100% 20%;
+}
+
+.cal-bg {
+  background-image: url("/assets/volunteer-calendar-bg.png");
+  background-color: #B65303;
+  color: white;
+  height: 355px;
+}
+
 .volunteer-bio-main .bio-portrait {
   width: 100%;
   aspect-ratio: 1;
@@ -274,7 +292,7 @@ body h6 {
   .image-card-holder img {
     height: 100%;
     object-fit: cover;
-    border-radius: 25px;
+    border-radius: 50px;
   }
   .image-card-holder:nth-child(1) {
     margin-bottom: -5%;
