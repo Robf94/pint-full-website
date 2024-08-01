@@ -159,8 +159,7 @@ body h6 {
   transition: 0.2s ease;
   box-shadow: 0px 10px 10px 0px rgba(197, 197, 197, 0.7019607843);
   padding: 30px;
-  height: 100%;
-  height: 550px;
+  height: 600px;
 }
 .card-container .card-volunteer .card-body {
   padding: 30px 0 0 0;
@@ -170,7 +169,6 @@ body h6 {
 }
 .card-container .card-volunteer .card-img-fit {
   height: 50%;
-  aspect-ratio: 5/3;
   object-fit: cover;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -178,7 +176,7 @@ body h6 {
 .card-container .card-volunteer:hover {
   transform: scale(1.01);
 }
-.card-container .fit-for-nth-child .col:nth-child(1) .card-img-fit, .card-container .fit-for-nth-child .col:nth-child(3) .card-img-fit, .card-container .fit-for-nth-child .col:nth-child(4) .card-img-fit, .card-container .fit-for-nth-child .col:nth-child(11) .card-img-fit {
+.card-container .fit-for-nth-child .col:nth-child(3) .card-img-fit, .card-container .fit-for-nth-child .col:nth-child(4) .card-img-fit, .card-container .fit-for-nth-child .col:nth-child(11) .card-img-fit {
   object-position: 100% 25%;
 }
 .card-container .fit-for-nth-child .col:nth-child(2) .card-img-fit {
