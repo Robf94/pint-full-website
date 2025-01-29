@@ -12,6 +12,10 @@ body ul {
   list-style: none;
 }
 
+.full-width-container {
+  background-color: #e46c0a;
+}
+
 .navbar {
   z-index: 100;
 }
@@ -150,6 +154,13 @@ body h6 {
 }
 .stat-card .circle-icon .stat-icon {
   color: white;
+}
+
+.about-img {
+  max-width: 100%;
+  max-height: 350px;
+  aspect-ratio: 1/1;
+  border-radius: 50px;
 }
 
 .card-container .card-volunteer {

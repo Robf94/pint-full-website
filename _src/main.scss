@@ -91,6 +91,11 @@ body {
 
 // GLOBAL ELEMENTS
 
+// Full-width container with background
+.full-width-container {
+  background-color: $primary-color;
+}
+
 // Navbar
 .navbar {
   z-index: 100;
@@ -232,6 +237,15 @@ body {
   }
 }
 
+// ABOUT PAGE
+
+.about-img {
+  max-width: 100%;
+  max-height: 350px;
+  aspect-ratio: 1/1;
+  border-radius: $hero-card-border-radius;
+}
+
 // VOLUNTEER PAGE
 
 // Rearrange card styling to mixin but make sure everything still works properly
@@ -240,9 +254,7 @@ body {
   // margin: $section-separator;
 
   .card-volunteer {
-    @include card-base-style(
-      $card-border-radius: $volunteer-card-border-radius
-    );
+    @include card-base-style($card-border-radius: $volunteer-card-border-radius);
     transition: $transition;
     box-shadow: $shadow-cards;
     padding: 30px;
