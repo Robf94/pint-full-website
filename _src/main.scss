@@ -246,9 +246,40 @@ body {
   border-radius: $hero-card-border-radius;
 }
 
-// VOLUNTEER PAGE
+// OUTREACH PAGE
 
-// Rearrange card styling to mixin but make sure everything still works properly
+.outreach-card {
+  @include card-base-style($volunteer-card-border-radius);
+
+  .outreach-card-icon {
+    color: $primary-color;
+  }
+}
+
+.tab-color {
+  color: black !important;
+}
+
+.tab-color.active {
+  color: white !important;
+  background-color: $primary-color !important;
+}
+
+.outreach-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .card-body {
+    flex-grow: 1; // Ensures the body expands to fill available space
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; // Pushes content apart
+  }
+}
+
+
+// VOLUNTEER PAGE
 
 .card-container {
   // margin: $section-separator;

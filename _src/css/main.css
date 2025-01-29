@@ -163,6 +163,36 @@ body h6 {
   border-radius: 50px;
 }
 
+.outreach-card {
+  border-radius: 50px;
+  background-color: #f8f9fa;
+  text-decoration: none;
+}
+.outreach-card .outreach-card-icon {
+  color: #e46c0a;
+}
+
+.tab-color {
+  color: black !important;
+}
+
+.tab-color.active {
+  color: white !important;
+  background-color: #e46c0a !important;
+}
+
+.outreach-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.outreach-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .card-container .card-volunteer {
   border-radius: 50px;
   background-color: #f8f9fa;
