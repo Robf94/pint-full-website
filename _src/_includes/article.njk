@@ -1,0 +1,23 @@
+---
+layout: base.njk
+---
+
+<div
+  class="container-fluid p-0 position-relative article-hero text-white"
+  style="background-image: url('{{ hero_img }}');"
+>
+  <h1 class="position-absolute top-50 start-50 w-100 text-center translate-middle m-0">
+    {{ hero_heading }}
+  </h1>
+</div>
+
+<div class="container-fluid custom-padding-lg my-5">
+  <article>
+    <h1>{{ article_title }}</h1>
+    <p>{{ summary }}</p>
+    <div>
+      {{ content | safe }}
+    </div>
+    {# <img src="{{ article_img }}" /> #}
+  </article>
+</div>

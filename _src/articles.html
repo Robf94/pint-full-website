@@ -1,0 +1,38 @@
+---
+layout: base.njk
+title: News and Projects
+---
+
+<div
+  class="container-fluid p-0 position-relative article-hero text-white"
+  style="background-image: url(/assets/articles/news-hero.jpg)"
+>
+  <h1 class="position-absolute top-50 start-50 w-100 text-center translate-middle m-0">
+    News and Projects
+  </h1>
+</div>
+
+<div class="container-fluid card-container custom-padding-lg my-5">
+  <h1>{{ title }}</h1>
+  <div class="container-fluid">
+    <div class="row">
+      {% for article in collections.articles %}
+      <div class="col-12 col-md-6">
+        <!-- col-12 for mobile, col-md-6 for md+ -->
+        <a href="{{ article.url }}">
+          <div class="article-card">
+            {% if article.data.hero_img %}
+            <img
+              src="{{ article.data.hero_img }}"
+              alt="{{ article.data.article_title }}"
+              class="card-img"
+            />
+            {% endif %}
+          </div>
+          <h4 class="card-title">{{ article.data.article_title }}</h4>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

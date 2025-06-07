@@ -1,5 +1,4 @@
-module.exports = function(eleventyConfig) {
-  
+module.exports = function (eleventyConfig) {
   // Set custom directories for input, output, includes, and data
   eleventyConfig.addPassthroughCopy("./_src/assets");
   eleventyConfig.addPassthroughCopy("./_src/css/main.css");
@@ -17,6 +16,7 @@ module.exports = function(eleventyConfig) {
       output: "_site",
     },
     // Set Nunjucks as the HTML template engine
-    HTMLTemplateEngine: 'njk',
+    HTMLTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
   };
 };

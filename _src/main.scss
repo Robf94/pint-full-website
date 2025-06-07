@@ -278,7 +278,6 @@ body {
   }
 }
 
-
 // VOLUNTEER PAGE
 
 .card-container {
@@ -415,8 +414,28 @@ body {
   color: $primary-color;
 }
 
-.privacy-list {
+.privacy-list,
+.article-list {
   list-style: disc;
+}
+
+.article-hero {
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: transparentize($primary-color, 0.2);
+    mix-blend-mode: multiply;
+  }
+}
+
+.article-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 63px;
 }
 
 /* Footer */
@@ -436,6 +455,11 @@ body {
   .footer-list {
     padding: 0;
   }
+}
+
+.article-card {
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 // END SASS

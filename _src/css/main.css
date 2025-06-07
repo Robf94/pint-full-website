@@ -275,8 +275,28 @@ body h6 {
   color: #e46c0a;
 }
 
-.privacy-list {
+.privacy-list,
+.article-list {
   list-style: disc;
+}
+
+.article-hero {
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+.article-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(228, 108, 10, 0.8);
+  mix-blend-mode: multiply;
+}
+
+.article-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 63px;
 }
 
 /* Footer */
@@ -289,6 +309,11 @@ body h6 {
 }
 .footer-container .footer-list {
   padding: 0;
+}
+
+.article-card {
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
